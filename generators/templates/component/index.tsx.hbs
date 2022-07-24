@@ -1,0 +1,11 @@
+export interface {{pascalCase name}}Props {
+  title: string
+}
+
+export const {{pascalCase name}} = ({ title }: {{pascalCase name}}Props) => {
+  return (
+    <div className="flex justify-center">
+      <h1 className="font-bold text-lg">{title}</h1>
+    </div>
+  )
+}
