@@ -1,30 +1,29 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
-import { Sample } from '.'
+import { Button } from '.'
 
 export default {
-  title: 'Components/Sample',
-  component: Sample,
+  title: 'Components/Button',
+  component: Button,
   parameters: {
     design: {
       type: 'figma',
       url: 'https://www.figma.com/file/5POR2aLuetESGo24JoLmrn/Fade-App---landing-page?node-id=608%3A226',
     },
   },
-} as ComponentMeta<typeof Sample>
+} as ComponentMeta<typeof Button>
 
-const Template: ComponentStory<typeof Sample> = (args) => <Sample {...args} />
+const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
-  variant: 'default',
+  children: 'Button',
   size: 'medium',
-  children: 'Children',
 }
 
-export const Outline = Template.bind({})
-Outline.args = {
-  variant: 'outline',
+export const CustomClass = Template.bind({})
+CustomClass.args = {
+  children: 'Button',
+  className: 'uppercase',
   size: 'medium',
-  children: 'Children',
 }
