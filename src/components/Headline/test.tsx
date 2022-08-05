@@ -12,26 +12,20 @@ describe('<Headline />', () => {
     expect(heading).toBeInTheDocument()
   })
 
-  it('should have a variant small', () => {
-    const { getByTestId } = render(
-      <Headline line variant="small" title="Hello World" />,
-    )
+  it('should have a size small', () => {
+    const { getByTestId } = render(<Headline withLine title="Hello World" />)
     const heading = getByTestId('underline')
 
     expect(heading).toHaveClass(LineWidth['small'])
   })
-  it('should have a variant medium', () => {
-    const { getByTestId } = render(
-      <Headline line variant="medium" title="Hello World" />,
-    )
+  it('should have a size medium', () => {
+    const { getByTestId } = render(<Headline withLine title="Hello World" />)
     const heading = getByTestId('underline')
 
     expect(heading).toHaveClass(LineWidth['medium'])
   })
-  it('should have a variant large', () => {
-    const { getByTestId } = render(
-      <Headline line variant="large" title="Hello World" />,
-    )
+  it('should have a size large', () => {
+    const { getByTestId } = render(<Headline withLine title="Hello World" />)
     const heading = getByTestId('underline')
 
     expect(heading).toHaveClass(LineWidth['large'])

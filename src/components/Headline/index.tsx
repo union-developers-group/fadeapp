@@ -1,22 +1,18 @@
-import {
-  HeadlineContainer,
-  HeadlineTitle,
-  LineStyle,
-  LineWidth,
-} from './styles'
+import { HeadlineContainer, HeadlineTitle, LineStyle } from './styles'
 
 export interface HeadlineProps {
   title: string
-  variant?: 'small' | 'medium' | 'large'
-  line?: boolean
+  withLine?: boolean
+  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 }
-
-export const Headline = ({ title, line, variant = 'large' }: HeadlineProps) => {
-  const classNames = `${LineStyle} ${LineWidth[variant]} `
+// mudar h1 AS
+// storie
+export const Headline = ({ title, withLine, as = 'h2' }: HeadlineProps) => {
+  const classNames = `${LineStyle}`
   return (
     <div data-testid="Headline" className={HeadlineContainer}>
-      <h1 className={HeadlineTitle}>{title}</h1>
-      {line && <div data-testid="underline" className={classNames}></div>}
+      <h2 className={HeadlineTitle}>{title}</h2>
+      {withLine && <div data-testid="underline" className={classNames}></div>}
     </div>
   )
 }
