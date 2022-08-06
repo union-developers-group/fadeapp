@@ -1,18 +1,17 @@
-import { HeadlineContainer, HeadlineTitle, LineStyle } from './styles'
+import { LineStyle } from './styles'
+import getHeading from './getHeading'
 
 export interface HeadlineProps {
+  as?: string
   title: string
   withLine?: boolean
-  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 }
-// mudar h1 AS
-// storie
-export const Headline = ({ title, withLine, as = 'h2' }: HeadlineProps) => {
-  const classNames = `${LineStyle}`
+
+export const Headline = ({ title, withLine, as }: HeadlineProps) => {
   return (
-    <div data-testid="Headline" className={HeadlineContainer}>
-      <h2 className={HeadlineTitle}>{title}</h2>
-      {withLine && <div data-testid="underline" className={classNames}></div>}
+    <div role="heading" data-testid="Headline">
+      {getHeading(as!, title)}
+      {withLine && <div data-testid="underline" className={LineStyle}></div>}
     </div>
   )
 }
