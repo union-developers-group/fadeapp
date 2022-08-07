@@ -5,10 +5,10 @@ import { LineStyle } from './styles'
 
 describe('<Headline />', () => {
   it('should render by default', () => {
-    const { getByTestId, container } = render(
+    const { getByRole, container } = render(
       <Headline as="h2" title="Hello World" />,
     )
-    const heading = getByTestId('Headline')
+    const heading = getByRole('heading', { name: 'Hello World' })
     const h2 = container.querySelector('h2')
 
     expect(heading).toHaveTextContent('Hello World')

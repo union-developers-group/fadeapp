@@ -1,10 +1,5 @@
 import { HeadlineTitle } from './styles'
 
-type Tags = {
-  as?: string
-  title: string
-}
-
 export default function getHeading(as: string, title: string) {
   switch (as) {
     case 'h1':
