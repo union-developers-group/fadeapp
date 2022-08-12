@@ -6,7 +6,7 @@ import { LineStyle } from './styles'
 describe('<Headline />', () => {
   it('should render by default', () => {
     const { getByRole } = render(<Headline as="h2" title="Hello World" />)
-    const heading = getByRole('heading', { name: 'Hello World' })
+    const heading = getByRole('heading', { name: 'Hello World!' })
 
     expect(heading).not.toHaveAttribute('withLine')
     expect(heading).toBeInTheDocument()
