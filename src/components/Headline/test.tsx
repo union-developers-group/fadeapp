@@ -1,9 +1,7 @@
-import { render, screen } from '@testing-library/react'
+import { render } from '@testing-library/react'
 
 import { Headline } from '.'
 import { LineStyle } from './styles'
-
-const { getByRole } = screen
 
 describe('<Headline />', () => {
   it('should render by default', () => {
