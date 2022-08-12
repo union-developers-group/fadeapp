@@ -8,6 +8,7 @@ export default {
     design: {
       type: 'figma',
       url: 'FIGMA_URL_FRAME',
+      default: 'dark',
     },
   },
 } as ComponentMeta<typeof Headline>
@@ -23,16 +24,18 @@ Default.args = {
   as: 'h2',
 }
 
-export const CustomHeadingWithoutLine = Template.bind({})
-Default.args = {
+export const CustomHeading = Template.bind({})
+CustomHeading.args = {
   title: 'Heading without line',
   withLine: false,
   as: 'h4',
 }
 
-export const CustomHeadingWithLine = Template.bind({})
-Default.args = {
+export const WithLine = Template.bind({})
+WithLine.args = {
   title: 'Heading with line',
   withLine: true,
+  lineSize: 'medium',
   as: 'h3',
 }
+
