@@ -3,6 +3,7 @@ export const HeadlineTitle = `
   font-bold
   sm:text-6xl 
   relative
+  text-white
   
 `
 export const LineStyle = `
