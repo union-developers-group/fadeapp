@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Headline /> should match snapshot 1`] = `
+<div>
+  <div
+    class="relative"
+  >
+    <h5
+      class="
+  text-2xl 
+  font-bold
+  sm:text-6xl 
+
+  
+  
+} "
+    >
+      Hello
+    </h5>
+  </div>
+</div>
+`;
+
+exports[`<Headline /> should render a function with correct props : h2 1`] = `
+<h2
+  className="
+  text-2xl 
+  font-bold
+  sm:text-6xl 
+
+  
+  
+} "
+>
+  Teste
+</h2>
+`;
