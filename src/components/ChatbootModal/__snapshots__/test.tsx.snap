@@ -4,9 +4,9 @@ exports[`Should match snapshot 1`] = `
 <div
   class="
   fixed
-  bottom-[5.375rem]
+  bottom-[8.1rem]
   right-[5.563rem]
-  lg:bottom-[3.563rem]
+  lg:bottom-[6.363rem]
   lg:right-[9.563rem]
   w-[17.568rem]
   h-[21rem]
@@ -17,7 +17,7 @@ exports[`Should match snapshot 1`] = `
   role="chatboot-modal"
 >
   <header
-    class="
+    class=" 
   bg-white
   w-full
   h-[2.75rem]

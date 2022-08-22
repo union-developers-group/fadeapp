@@ -1,15 +1,15 @@
 export const ChatbootModalContainer = `
   fixed
-  bottom-[5.375rem]
+  bottom-[8.1rem]
   right-[5.563rem]
-  lg:bottom-[3.563rem]
+  lg:bottom-[6.363rem]
   lg:right-[9.563rem]
   w-[17.568rem]
   h-[21rem]
   flex
   flex-col
 `
-export const ChatbootModalHeader = `
+export const ChatbootModalHeader = ` 
   bg-white
   w-full
   h-[2.75rem]
