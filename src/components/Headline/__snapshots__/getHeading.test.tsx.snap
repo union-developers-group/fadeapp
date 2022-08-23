@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getHeading should match snapshot: Teste 1`] = `
+<h2
+  className="
+  text-2xl font-bold sm:text-6xl    
+} "
+>
+  Teste
+</h2>
+`;
+
+exports[`getHeading should match snapshot: h2 1`] = `
+<h2
+  className="
+  text-2xl font-bold sm:text-6xl    
+} "
+>
+  Teste
+</h2>
+`;

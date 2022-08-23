@@ -1,5 +1,5 @@
 import getHeading from './helpers/getHeading'
-import { LineSizeStyle, LineStyle } from './styles'
+import { HeadlineContainer, LineSizeStyle, LineStyle } from './styles'
 
 export interface HeadlineProps {
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
@@ -12,11 +12,11 @@ export const Headline = ({
   title,
   withLine = false,
   as = 'h2',
-  lineSize = 'large',
+  lineSize = 'medium',
 }: HeadlineProps) => {
   const classNames = `${LineStyle} ${LineSizeStyle[lineSize]} `
   return (
-    <div className="relative">
+    <div className={HeadlineContainer}>
       {getHeading(as, title)}
       {withLine && <div data-testid="underline" className={classNames} />}
     </div>
