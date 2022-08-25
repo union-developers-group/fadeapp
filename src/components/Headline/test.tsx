@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 import { Headline } from '.'
-import { LineStyle } from './styles'
+
 
 describe('<Headline />', () => {
   it('should render by default', () => {
@@ -10,6 +10,7 @@ describe('<Headline />', () => {
     const heading = getByRole('heading', { name: 'Hello World' })
     const line = queryByTestId('underline')
 
+    expect(heading.tagName.toLocaleLowerCase()).not.toBe('div')
     expect(heading).toBeInTheDocument()
     expect(line).toBe(null)
   })
@@ -22,10 +23,10 @@ describe('<Headline />', () => {
   })
 
   it('should render a line under the title', () => {
-    const { getByTestId } = render(<Headline withLine title="Hello World" />)
-    const line = getByTestId('underline')
+    const { queryByTestId } = render(<Headline withLine title="Hello World" />)
+    const line = queryByTestId('underline')
 
-    expect(line).toHaveClass(LineStyle)
+    expect(line).not.toBe(null)
   })
 
   it('should match snapshot', () => {

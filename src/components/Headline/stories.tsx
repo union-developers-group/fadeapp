@@ -11,6 +11,11 @@ export default {
       default: 'dark',
     },
   },
+  args: {
+    title: 'Quem recomenda',
+    withLine: false,
+    as: 'h2',
+  },
 } as ComponentMeta<typeof Headline>
 
 const Template: ComponentStory<typeof Headline> = (args) => (
@@ -18,24 +23,22 @@ const Template: ComponentStory<typeof Headline> = (args) => (
 )
 
 export const Default = Template.bind({})
-Default.args = {
-  title: 'Headline',
-  withLine: false,
-  as: 'h2',
-}
+Default.args = {}
 
 export const CustomHeading = Template.bind({})
 CustomHeading.args = {
-  title: 'Heading without line',
-  withLine: false,
   as: 'h4',
 }
 
 export const WithLine = Template.bind({})
 WithLine.args = {
-  title: 'Heading with line',
   withLine: true,
   lineSize: 'medium',
-  as: 'h3',
+}
+
+export const WithLineLarge = Template.bind({})
+WithLine.args = {
+  withLine: true,
+  lineSize: 'large',
 }
 
