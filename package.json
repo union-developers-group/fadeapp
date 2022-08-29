@@ -25,6 +25,7 @@
     "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
   },
   "dependencies": {
+    "@headlessui/react": "^1.6.6",
     "autoprefixer": "^10.4.2",
     "cssnano": "^5.0.16",
     "next": "12.0.8",
