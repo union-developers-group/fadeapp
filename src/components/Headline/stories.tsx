@@ -5,6 +5,9 @@ export default {
   title: 'Components/Headline',
   component: Headline,
   parameters: {
+    backgrounds: {
+      default: 'dark',
+    },
     design: {
       type: 'figma',
       url: 'FIGMA_URL_FRAME',
