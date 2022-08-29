@@ -12,9 +12,10 @@ export default {
     },
   },
   args: {
-    title: 'Quem recomenda',
+    title: 'Quem usa recomenda',
     withLine: false,
     as: 'h2',
+    textPosition: 'center',
   },
 } as ComponentMeta<typeof Headline>
 
@@ -34,11 +35,13 @@ export const WithLine = Template.bind({})
 WithLine.args = {
   withLine: true,
   lineSize: 'medium',
+  textPosition: 'left',
 }
 
 export const WithLineLarge = Template.bind({})
 WithLine.args = {
   withLine: true,
   lineSize: 'large',
+  textPosition: 'left',
 }
 

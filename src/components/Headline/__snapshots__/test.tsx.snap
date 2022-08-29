@@ -5,16 +5,16 @@ exports[`<Headline /> should match snapshot 1`] = `
   <div
     class="
 relative flex flex-col text-white 
-  min-w-[404px] items-left
-"
+  min-w-[25.25rem] 
+items-center"
   >
-    <h5
+    <h2
       class="
   text-2xl font-bold sm:text-6xl  
 } "
     >
       Hello
-    </h5>
+    </h2>
   </div>
 </div>
 `;
