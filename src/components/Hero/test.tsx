@@ -12,4 +12,18 @@ describe('<Hero />', () => {
 
     expect(heading).toBeInTheDocument()
   })
+
+   it('should have the image prop', () => {
+     render(<Hero />)
+     const image = getByRole('hero', { name: '' })
+
+     expect(image).toHaveStyle('background: url(/background.png)')
+   })
+
+  
+  it('should match snapshot', () => {
+    const { container } = render(<Hero />)
+
+    expect(container).toMatchSnapshot()
+  })
 })
