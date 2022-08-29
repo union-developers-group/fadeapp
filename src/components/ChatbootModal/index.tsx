@@ -1,3 +1,12 @@
+import { useState } from 'react'
+import { Icon } from '@iconify/react'
+import { Dialog } from '@headlessui/react'
+
+import { Logo } from 'components/Logo'
+
+import { botMessages, personMessages } from './mock'
+import { BotMessageTemplate } from './templates/BotMessageTemplate'
+import { PersonMessageTemplate } from './templates/PersonMessageTemplate'
 import {
   ChatbootModalContainer,
   ChatbootModalSendButton,
@@ -8,61 +17,55 @@ import {
   ChatbootModalHeader,
   ChatbootModalCloseButton,
   ChatbootModalCloseIcon,
-} from "./styles"
-import { Logo } from "components/Logo";
-import { Icon } from '@iconify/react';
-import { botMessages, personMessages } from "./mock";
-import { botMessageTemplate } from "./templates/botMessageTemplate";
-import { personMessageTemplate } from "./templates/personMessageTemplate";
+} from './styles'
 
 export interface ChatMessage {
   messageId: number
   message: string
 }
 
-interface ChatbootModalProps {
-  onCloseModal: () => void
-}
+export const ChatbootModal = () => {
+  const [isOpen, setIsOpen] = useState(true)
 
-const onSendMessage = () => {
-  console.log('Success send message')
-}
+  function onClose() {
+    setIsOpen(false)
+  }
 
-export const ChatbootModal = ({ onCloseModal }: ChatbootModalProps) => {
   return (
-    <div role="chatboot-modal" id="teaste" className={ChatbootModalContainer}>
-      <header role="chatboot-modal-header" className={ChatbootModalHeader}>
-        <div role="chatboot-modal-header-logo-container" className={ChatbootModalHeaderLogo}>
-          <Logo width={101} height={21} />
-        </div>
-        <button
-          className={ChatbootModalCloseButton}
-          onClick={onCloseModal}
-          role="chatboot-close-button"
-        ><Icon className={ChatbootModalCloseIcon} icon="ci:close-big" /></button>
-      </header>
-      <div role="chatboot-modal-main" className={ChatbootModalMain}>
-        {botMessages.map(botMessageTemplate)}
-        {personMessages.map(personMessageTemplate)}
-      </div>
-      <footer role="chatboot-modal-footer">
-        <form 
-            role='chatboot-modal-form'
-            onSubmit={(e)=> {
-            e.preventDefault() 
-            console.log('Success submit')
-          }}>
-          <textarea role="chatboot-modal-textarea" className={ChatbootModalTextarea} placeholder="Digite a sua mensagem aqui" />
-          <button
-            className={ChatbootModalSendButton}
-            onClick={onSendMessage}
-            role="chatboot-send-button"
-            type="submit"
-          >
-            <Icon className={ChatbootModalSendIcon} icon="ic:baseline-send" />
+    <Dialog open={isOpen} onClose={onClose}>
+      <Dialog.Panel className={ChatbootModalContainer}>
+        <header className={ChatbootModalHeader}>
+          <div className={ChatbootModalHeaderLogo}>
+            <Logo width={101} height={21} />
+          </div>
+          <button className={ChatbootModalCloseButton} onClick={onClose}>
+            <Icon
+              className={ChatbootModalCloseIcon}
+              aria-label="Fechar chat"
+              icon="ci:close-big"
+            />
           </button>
-        </form>
-      </footer>
-    </div>
+        </header>
+        <div className={ChatbootModalMain}>
+          {botMessages.map(BotMessageTemplate)}
+          {personMessages.map(PersonMessageTemplate)}
+        </div>
+        <footer>
+          <form>
+            <textarea
+              className={ChatbootModalTextarea}
+              placeholder="Digite a sua mensagem aqui"
+            />
+            <button type="submit" className={ChatbootModalSendButton}>
+              <Icon
+                className={ChatbootModalSendIcon}
+                icon="ic:baseline-send"
+                aria-label="Enviar mensagem"
+              />
+            </button>
+          </form>
+        </footer>
+      </Dialog.Panel>
+    </Dialog>
   )
 }

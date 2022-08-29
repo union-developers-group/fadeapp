@@ -1,65 +1,73 @@
-import { render, fireEvent, screen } from '@testing-library/react'
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-empty-function */
+import { fireEvent, render, screen } from '@testing-library/react'
+
 import { ChatbootModal } from '.'
 
-const { getByRole } = screen
+const { getByRole, getAllByLabelText, getAllByRole } = screen
+
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
+
+  observe() {
+    return null
+  }
+
+  disconnect() {
+    return null
+  }
+
+  unobserve() {
+    return null
+  }
+} as any
 
 describe('<ChatbootModal />', () => {
-  it('Should render in the document', () => {
-    render(<ChatbootModal onCloseModal={() => 'close'} />)
+  it('Should render ChatbootModal', () => {
+    render(<ChatbootModal />)
 
-    const chatbootModal = getByRole('chatboot-modal')
+    const modal = getByRole('dialog')
+    const [headerLogo] = getAllByLabelText('Fade App')
+    const [closeModalButton, sendMessageBtton] = getAllByRole('button')
+    const textarea = getByRole('textbox')
 
-    const chatbootModalHeader = getByRole('chatboot-modal-header')
-    const chatbootModalHeaderLogoContainer = getByRole('chatboot-modal-header-logo-container')
-    const chatbootModalCloseButton = getByRole('chatboot-close-button')
-    const chatbootModalMain = getByRole('chatboot-modal-main')
-    const chatbootModalFooter = getByRole('chatboot-modal-footer')
-    const chatbootModalForm = getByRole('chatboot-modal-form' )
-    const chatbootModalTextarea = getByRole('chatboot-modal-textarea')
-    const chatbootModalSendButton = getByRole('chatboot-send-button')
-    
-    expect(chatbootModal).toBeInTheDocument()
+    expect(modal).toBeInTheDocument()
+    expect(headerLogo).toBeInTheDocument()
+    expect(closeModalButton).toBeInTheDocument()
+    expect(textarea).toBeInTheDocument()
+    expect(sendMessageBtton).toBeInTheDocument()
+  })
 
-    expect(chatbootModal).toContainElement(chatbootModalHeader)
-    expect(chatbootModal).toContainElement(chatbootModalMain)
-    expect(chatbootModal).toContainElement(chatbootModalFooter)
+  it('Should close modal on icon click ', () => {
+    render(<ChatbootModal />)
 
-    expect(chatbootModalHeader).toContainElement(chatbootModalHeaderLogoContainer)
-    expect(chatbootModalHeader).toContainElement(chatbootModalCloseButton)
+    const modal = getByRole('dialog')
+    const [closeModalButton] = getAllByRole('button')
 
-    expect(chatbootModalHeaderLogoContainer).toContainHTML('img')
+    expect(modal).toBeInTheDocument()
 
-    expect(chatbootModalCloseButton).toContainHTML('span')
+    fireEvent.click(closeModalButton)
 
-    expect(chatbootModalMain).toHaveTextContent('Olá, bem vindo ao assistente virtual do Fade App. Comece escolhendo uma opção:')
-    expect(chatbootModalMain).toHaveTextContent('Olá, não estou conseguindo achar o app na play store, poderia me ajudar?')
+    expect(modal).not.toBeInTheDocument()
+  })
 
-    expect(chatbootModalFooter).toContainElement(chatbootModalForm)
-    
-    expect(chatbootModalForm).toContainElement(chatbootModalTextarea)
-    expect(chatbootModalForm).toContainElement(chatbootModalSendButton)
-    
-    expect(chatbootModalTextarea).not.toHaveTextContent('content')
+  it('Should close modal on press ESC', () => {
+    render(<ChatbootModal />)
 
-    expect(chatbootModalSendButton).toContainHTML('span')
+    const modal = getByRole('dialog')
+
+    expect(modal).toBeInTheDocument()
+
+    fireEvent.keyDown(modal, {
+      key: 'Escape',
+    })
+
+    expect(modal).not.toBeInTheDocument()
+  })
+
+  it('should match snapshot', () => {
+    const { container } = render(<ChatbootModal />)
+
+    expect(container).toMatchSnapshot()
   })
 })
-
-  it('Shoud have close on press the button', () => {
-    const handleClose = jest.fn()
-    render(<ChatbootModal onCloseModal={handleClose} />)
-    fireEvent.click(screen.getByRole('chatboot-close-button'))
-    expect(handleClose).toHaveBeenCalledTimes(1)
-  })
-
-    it('Shoud have send on press the button', () => {
-      render(<ChatbootModal onCloseModal={() => 'close'} />)
-      fireEvent.click(screen.getByRole('chatboot-send-button'))
-    })
-
-    it('Should match snapshot', () => {
-      render(<ChatbootModal onCloseModal={() => 'close'} />)
-      const chatbootModal = getByRole('chatboot-modal')
-
-      expect(chatbootModal).toMatchSnapshot()
-    })
