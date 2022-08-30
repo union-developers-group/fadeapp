@@ -15,7 +15,7 @@ export const LineStyle = `
 `
 
 export const LineSizeStyle = {
-  medium: 'md:max-w-[8.75rem]',
+  medium: 'w-1/5 max-w-[8.75rem]',
   large: 'max-w-[22rem] min-w-[22rem]',
 }
 
