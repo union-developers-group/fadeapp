@@ -12,7 +12,11 @@ export default {
   },
 } as ComponentMeta<typeof Hero>
 
-const Template: ComponentStory<typeof Hero> = () => <Hero />
+const Template: ComponentStory<typeof Hero> = (args) => <Hero {...args} />
 
 export const Default = Template.bind({})
-Default.args = {}
+Default.args = {
+  subtitle:
+    'Seu treino personalizado, na palma da sua mão, a qualquer hora e lugar.',
+  minorText: 'Experimente 7 dias Grátis',
+}

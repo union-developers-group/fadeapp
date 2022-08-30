@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Hero /> should match snapshot 1`] = `
+<div>
+  <section
+    class="
+  flex h-[100vh] w-full flex-col items-start justify-center p-[2rem] bg-blend-overlay md:p-[9.375rem] bg-no-repeat object-contain
+"
+    role="hero"
+    style="background: url(/background.png); background-position: center;"
+  >
+    <div
+      class=" 
+flex w-[27.75rem] flex-col items-center justify-center md:items-start md:justify-start 
+"
+    >
+      <h2>
+        Headline
+      </h2>
+      <p
+        class="
+  mb-5 text-center text-2xl font-normal text-white md:text-left
+"
+      >
+        Seu treino personalizado, na palma da sua mão, a qualquer hora e lugar.
+      </p>
+      <div
+        class="
+  flex flex-col last:items-center
+"
+      >
+        <button
+          class="flex items-center justify-center rounded-10 bg-primary font-bold text-secondary transition hover:text-primary hover:bg-transparent border-2 border-primary transition-color py-4 w-[21.5rem] text-lg h-[3.625rem] "
+        >
+          EU QUERO
+        </button>
+        <p
+          class="
+  mt-2 text-sm text-gray-500
+"
+        >
+          Experimente 7 dias Grátis
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+`;
