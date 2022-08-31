@@ -16,7 +16,8 @@ const Template: ComponentStory<typeof Hero> = (args) => <Hero {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
+  headlineTitle: 'Construa seu shape sem atrapalhar a sua rotina',
   subtitle:
     'Seu treino personalizado, na palma da sua mão, a qualquer hora e lugar.',
-  minorText: 'Experimente 7 dias Grátis',
+  img: '/background.png',
 }

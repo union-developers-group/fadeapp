@@ -7,14 +7,15 @@ import {
   Try,
 } from './styles'
 
-const img = '/background.png'
+
 
 export interface HeroProps {
   subtitle: string
-  minorText: string
+  img: string
+  headlineTitle: string
 }
 
-export const Hero = ({ subtitle, minorText }: HeroProps) => {
+export const Hero = ({ subtitle, img, headlineTitle }: HeroProps) => {
   return (
     <section
       role="hero"
@@ -25,12 +26,12 @@ export const Hero = ({ subtitle, minorText }: HeroProps) => {
       }}
     >
       <div className={TitleContainer}>
-        <h2>Headline</h2>
+        <h2>{headlineTitle}</h2>
         <p className={Subtitle}>{subtitle}</p>
 
         <div className={ButtonContainer}>
           <Button>EU QUERO</Button>
-          <p className={Try}>{minorText}</p>
+          <p className={Try}>Experimente 7 dias Grátis</p>
         </div>
       </div>
     </section>
