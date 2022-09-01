@@ -15,6 +15,9 @@ w-[18.75rem]
 lg:left-[1.875rem]
 lg:top-[3.438rem]
 text-white
+break-words
+overflow-hidden
+max-h-8
 mb-4
 lg:mb-0
 text-center
@@ -26,6 +29,9 @@ box-border
 
 export const messageStyle = `
 text-white
+break-words
+overflow-hidden
+max-h-[160px]
 text-center
 mb-8
 lg:mb-0
