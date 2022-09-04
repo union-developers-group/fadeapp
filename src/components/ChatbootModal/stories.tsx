@@ -4,7 +4,6 @@ import { ChatbootModal } from '.'
 export default {
   title: 'Components/ChatbootModal',
   component: ChatbootModal,
-  argTypes: { onCloseModal: { action: 'clicked' } },
   parameters: {
     backgrounds: {
       default: 'dark',
@@ -16,9 +15,7 @@ export default {
   },
 } as ComponentMeta<typeof ChatbootModal>
 
-const Template: ComponentStory<typeof ChatbootModal> = (args) => (
-  <ChatbootModal {...args}/>
-)
+const Template: ComponentStory<typeof ChatbootModal> = () => <ChatbootModal />
 
 export const Default = Template.bind({})
 Default.args = {}

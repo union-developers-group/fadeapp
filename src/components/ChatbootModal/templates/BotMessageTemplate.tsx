@@ -7,7 +7,7 @@ import {
   ChatbootModalRobotTextContainer,
 } from '../styles'
 
-export const botMessageTemplate = (chatMessage: ChatMessage) => {
+export const BotMessageTemplate = (chatMessage: ChatMessage) => {
   return (
     <p key={chatMessage.messageId} className={ChatbootModalRobotTextContainer}>
       <span className={ChatbootModalRobotLogo}>
