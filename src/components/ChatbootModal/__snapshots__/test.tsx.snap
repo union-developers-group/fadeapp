@@ -17,6 +17,7 @@ exports[`<ChatbootModal /> should match snapshot 1`] = `
   h-[21rem]
   flex
   flex-col
+  animate-fade-in-down
 "
     id="headlessui-dialog-panel-8"
   >
@@ -274,7 +275,7 @@ exports[`<ChatbootModal /> should match snapshot 1`] = `
         <span
           class="
   absolute
-  left-[-1.9rem] 
+  left-[-1.9rem]
 "
         >
           <svg
@@ -490,7 +491,7 @@ exports[`<ChatbootModal /> should match snapshot 1`] = `
         <span
           class="
   absolute
-  left-[-1.9rem] 
+  left-[-1.9rem]
 "
         >
           <svg

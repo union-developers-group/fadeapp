@@ -8,6 +8,7 @@ export const ChatbootModalContainer = `
   h-[21rem]
   flex
   flex-col
+  animate-fade-in-down
 `
 export const ChatbootModalHeader = `
   bg-white
@@ -64,7 +65,7 @@ export const ChatbootModalSendButton = `
 `
 
 export const ChatbootModalSendIcon = `
-  text-primary 
+  text-primary
   w-[1.388rem]
   h-[1.2rem]
 `
@@ -99,7 +100,7 @@ export const ChatbootModalRobotTextContainer = `
 `
 export const ChatbootModalRobotLogo = `
   absolute
-  left-[-1.9rem] 
+  left-[-1.9rem]
 `
 
 export const ChatbootModalPersonTextContainer = `
