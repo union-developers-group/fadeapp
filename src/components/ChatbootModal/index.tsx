@@ -36,7 +36,7 @@ export const ChatbootModal = () => {
       <Dialog.Panel className={ChatbootModalContainer}>
         <header className={ChatbootModalHeader}>
           <div className={ChatbootModalHeaderLogo}>
-            <Logo width={101} height={21} />
+            <Logo width={101} height={21} colorText="dark" />
           </div>
           <button className={ChatbootModalCloseButton} onClick={onClose}>
             <Icon

@@ -1,8 +1,8 @@
 export const ChatbootModalContainer = `
   fixed
-  bottom-[5.375rem]
+  bottom-[8.1rem]
   right-[5.563rem]
-  lg:bottom-[3.563rem]
+  lg:bottom-[6.363rem]
   lg:right-[9.563rem]
   w-[17.568rem]
   h-[21rem]
@@ -34,7 +34,7 @@ export const ChatbootModalMain = `
   pb-4
   box-border
   overflow-auto
-  scrollbar-thin 
+  scrollbar-thin
   scrollbar-thumb-gray-500
   scrollbar-track-white
   `
@@ -51,8 +51,7 @@ export const ChatbootModalTextarea = `
   text-xs
   absolute
   bottom-[-2.75rem]
-  focus:outline-0
-  scrollbar-thin 
+  scrollbar-thin
   scrollbar-thumb-gray-500
   scrollbar-track-white
   text-secondary
@@ -109,15 +108,15 @@ export const ChatbootModalPersonTextContainer = `
   items-center
   justify-center
   rounded-t-lg
-  relative 
-  rounded-bl-lg 
-  text-xs 
-  shadow-lg 
-  shadow-gray-500/50 
+  relative
+  rounded-bl-lg
+  text-xs
+  shadow-lg
+  shadow-gray-500/50
   bg-white
-  p-3 
-  box-border 
-  mr-6 
-  ml-11 
+  p-3
+  box-border
+  mr-6
+  ml-11
   mb-3
 `

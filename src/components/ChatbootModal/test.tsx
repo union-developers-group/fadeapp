@@ -66,8 +66,10 @@ describe('<ChatbootModal />', () => {
   })
 
   it('should match snapshot', () => {
-    const { container } = render(<ChatbootModal />)
+    render(<ChatbootModal />)
 
-    expect(container).toMatchSnapshot()
+    const modal = getByRole('dialog')
+
+    expect(modal).toMatchSnapshot()
   })
 })
