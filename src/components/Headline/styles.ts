@@ -2,10 +2,10 @@ export const HeadlineContainer = `
 relative flex flex-col text-white `
 
 export const HeadlineContainerMax = `
-  max-w-max 
+  min-w-[25.25rem] 
 `
 export const HeadlineContainerMin = `
-  min-w-[25.25rem] 
+  max-w-max
 `
 export const HeadlineTitle = `
   text-2xl font-bold sm:text-6xl  
