@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Hero /> should match snapshot 1`] = `
+exports[`<Hero /> should render the hero 1`] = `
 <div>
   <section
     class="

@@ -13,9 +13,15 @@ export interface HeroProps {
   subtitle: string
   img: string
   headlineTitle: string
+  textButton: string
 }
 
-export const Hero = ({ subtitle, img, headlineTitle }: HeroProps) => {
+export const Hero = ({
+  subtitle,
+  img,
+  headlineTitle,
+  textButton,
+}: HeroProps) => {
   return (
     <section
       role="hero"
@@ -30,7 +36,7 @@ export const Hero = ({ subtitle, img, headlineTitle }: HeroProps) => {
         <p className={Subtitle}>{subtitle}</p>
 
         <div className={ButtonContainer}>
-          <Button>EU QUERO</Button>
+          <Button>{textButton}</Button>
           <p className={Try}>Experimente 7 dias Grátis</p>
         </div>
       </div>
