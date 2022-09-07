@@ -34,15 +34,30 @@ module.exports = {
       },
       backgroundImage: {
         'gradient-1': 'linear-gradient(180deg, #000006 0%, #212948 100%)',
-        'gradient-2': 'linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(33, 41, 72, 0.71) 0.01%, rgba(33, 41, 72, 0.5) 37.5%, #212948 72.4%)',
-        'gradient-3': 'linear-gradient(180deg, #3B4571 0%, #212948 84.37%, #000000 99.48%)'
+        'gradient-2':
+          'linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(33, 41, 72, 0.71) 0.01%, rgba(33, 41, 72, 0.5) 37.5%, #212948 72.4%)',
+        'gradient-3':
+          'linear-gradient(180deg, #3B4571 0%, #212948 84.37%, #000000 99.48%)',
       },
       borderRadius: {
         10: '10px',
       },
+      keyframes: {
+        'fade-in-down': {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(-10px)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)',
+          },
+        },
+      },
+      animation: {
+        'fade-in-down': 'fade-in-down 0.3s ease-out',
+      },
     },
   },
-  plugins: [
-    require('tailwind-scrollbar')
-  ],
+  plugins: [require('tailwind-scrollbar')],
 }
