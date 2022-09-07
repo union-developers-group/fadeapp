@@ -57,7 +57,7 @@ WithLeftPosition.args = {
 }
 
 export const WithCenterPosition = Template.bind({})
-WithLineLarge.args = {
+WithCenterPosition.args = {
   withLine: true,
   lineSize: 'large',
   position: 'center',
