@@ -35,17 +35,35 @@ CustomHeading.args = {
   as: 'h4',
 }
 
-export const WithLine = Template.bind({})
-WithLine.args = {
+export const WithLineMedium = Template.bind({})
+WithLineMedium.args = {
   withLine: true,
   lineSize: 'medium',
   position: 'center',
 }
 
 export const WithLineLarge = Template.bind({})
-WithLine.args = {
+WithLineLarge.args = {
   withLine: true,
   lineSize: 'large',
   position: 'center',
 }
+
+export const WithLeftPosition = Template.bind({})
+WithLeftPosition.args = {
+  withLine: true,
+  lineSize: 'large',
+  position: 'left',
+}
+
+export const WithCenterPosition = Template.bind({})
+WithLineLarge.args = {
+  withLine: true,
+  lineSize: 'large',
+  position: 'center',
+}
+
+
+
+
 
