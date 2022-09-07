@@ -1,43 +1,58 @@
-import { render } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import { Headline } from '.'
 
+const { getByRole, queryByTestId, getByTestId } = screen
 
 describe('<Headline />', () => {
   it('should render by default', () => {
-    const { getByRole, queryByTestId } = render(
-      <Headline textPosition="center" as="h2" title="Hello World" />,
-    )
+    render(<Headline as="h2" title="Hello World" />)
     const heading = getByRole('heading', { name: 'Hello World' })
     const line = queryByTestId('underline')
 
     expect(heading.tagName.toLocaleLowerCase()).toBe('h2')
-    expect(heading).toBeInTheDocument()
-    expect(line).toBe(null)
+    expect(line).not.toBeInTheDocument()
   })
 
   it('should render custom heading', () => {
-    const { getByRole } = render(
-      <Headline textPosition="center" as="h1" title="Texto" />,
-    )
+    render(<Headline position="center" as="h1" title="Texto" />)
     const heading = getByRole('heading', { name: 'Texto' })
 
     expect(heading.tagName.toLocaleLowerCase()).toBe('h1')
-    expect(heading).toBeInTheDocument()
   })
 
   it('should render a line under the title', () => {
-    const { queryByTestId } = render(
-      <Headline textPosition="center" withLine title="Hello World" />,
-    )
-    const line = queryByTestId('underline')
+    render(<Headline position="center" withLine title="Hello World" />)
+    const line = getByTestId('underline')
 
-    expect(line).not.toBe(null)
+    expect(line).toBeInTheDocument()
+  })
+
+  it('should render correct line size', () => {
+    const { container, rerender } = render(
+      <Headline as="h4" withLine lineSize="medium" title="Hello World" />,
+    )
+
+    expect(container.firstChild).toHaveClass('min-w-[25.25rem]')
+
+    rerender(<Headline as="h5" withLine lineSize="large" title="Hello World" />)
+
+    expect(container.firstChild).toHaveClass('max-w-max')
+  })
+
+  it('should render correct position', () => {
+    const { container, rerender } = render(
+      <Headline as="h6" withLine position="left" title="Hello World" />,
+    )
+
+    expect(container.firstChild).toHaveClass('items-start')
+
+    rerender(<Headline withLine position="center" title="Hello World" />)
+
+    expect(container.firstChild).toHaveClass('items-center')
   })
 
   it('should match snapshot', () => {
-    const { container } = render(
-      <Headline textPosition="center" title="Hello" />,
-    )
+    const { container } = render(<Headline title="Hello" />)
 
     expect(container).toMatchSnapshot()
   })

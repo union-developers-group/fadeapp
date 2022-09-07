@@ -12,7 +12,7 @@ export interface HeadlineProps {
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
   title: string
   lineSize?: 'medium' | 'large'
-  textPosition: 'left' | 'center'
+  position?: 'left' | 'center'
   withLine?: boolean
 }
 
@@ -21,17 +21,17 @@ export const Headline = ({
   withLine = false,
   as = 'h2',
   lineSize = 'medium',
-  textPosition = 'center',
+  position = 'left',
 }: HeadlineProps) => {
   const classNames = `${LineStyle} ${LineSizeStyle[lineSize]}}  `
 
-  const mid = lineSize === 'medium' ? HeadlineContainerMin : ''
-  const larg = lineSize === 'large' ? HeadlineContainerMax : ''
+  const lineSizeStyle =
+    lineSize === 'medium' ? HeadlineContainerMin : HeadlineContainerMax
 
   return (
     <div
       className={
-        HeadlineContainer + mid + larg + TextPositionStyle[textPosition]
+        HeadlineContainer + lineSizeStyle + TextPositionStyle[position]
       }
     >
       {getHeading(as, title)}

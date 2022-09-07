@@ -10,7 +10,7 @@ export default {
     },
     design: {
       type: 'figma',
-      url: 'FIGMA_URL_FRAME',
+      url: 'https://www.figma.com/file/5POR2aLuetESGo24JoLmrn/Fade-App---landing-page?node-id=2%3A3',
       default: 'dark',
     },
   },
@@ -18,7 +18,8 @@ export default {
     title: 'Quem usa recomenda',
     withLine: false,
     as: 'h2',
-    textPosition: 'center',
+    position: 'left',
+    lineSize: 'medium',
   },
 } as ComponentMeta<typeof Headline>
 
@@ -38,13 +39,13 @@ export const WithLine = Template.bind({})
 WithLine.args = {
   withLine: true,
   lineSize: 'medium',
-  textPosition: 'left',
+  position: 'center',
 }
 
 export const WithLineLarge = Template.bind({})
 WithLine.args = {
   withLine: true,
   lineSize: 'large',
-  textPosition: 'left',
+  position: 'center',
 }
 
