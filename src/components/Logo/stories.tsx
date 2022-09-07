@@ -19,11 +19,13 @@ Default.args = {
   width: 400,
   height: 85,
   hiddenText: false,
+  colorText: 'light'
 }
 
 export const HiddenText = Template.bind({})
-Default.args = {
+HiddenText.args = {
   width: 400,
   height: 85,
   hiddenText: true,
+  colorText: 'light'
 }
