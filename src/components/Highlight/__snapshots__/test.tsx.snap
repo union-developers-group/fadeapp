@@ -19,8 +19,8 @@ py-[3.75rem]
 mx-auto 
 flex-col 
 lg:flex-row
-"
-    data-testid="highlightContainer"
+lg:even:flex-row-reverse 
+         "
   >
     <div
       class="
@@ -59,6 +59,7 @@ box-border
 flex 
 justify-center 
 items-center 
+max-w-[80%]
 lg:max-w-[50%] 
 xl:max-w-full
 "
@@ -70,6 +71,150 @@ w-full
 h-full
 "
         src="http://cdn.com/photo-name.jpg"
+      />
+    </div>
+  </div>
+  <div
+    class="
+relative 
+flex 
+items-center 
+justify-center 
+w-full 
+max-w-screen 
+gap-20 
+lg:gap-14 
+xl:gap-32 
+px-4 
+sm:px-8 
+py-[3.75rem] 
+mx-auto 
+flex-col 
+lg:flex-row
+lg:even:flex-row-reverse 
+         "
+  >
+    <div
+      class="
+text-white 
+text-center 
+lg:text-left 
+max-w-md 
+flex-1
+"
+    >
+      <h3
+        class="
+text-4xl 
+sm:text-6xl 
+lg:text-7xl 
+mb-4 
+sm:mb-6 
+font-bold
+"
+      >
+        Title2
+      </h3>
+      <p
+        class="
+text-base 
+sm:text-xl 
+lg:text-2xl
+"
+      >
+        Text2
+      </p>
+    </div>
+    <div
+      class="
+box-border 
+flex 
+justify-center 
+items-center 
+max-w-[80%]
+lg:max-w-[50%] 
+xl:max-w-full
+"
+    >
+      <img
+        alt="Title2"
+        class="
+w-full 
+h-full
+"
+        src="http://cdn.com/photo2-name.jpg"
+      />
+    </div>
+  </div>
+  <div
+    class="
+relative 
+flex 
+items-center 
+justify-center 
+w-full 
+max-w-screen 
+gap-20 
+lg:gap-14 
+xl:gap-32 
+px-4 
+sm:px-8 
+py-[3.75rem] 
+mx-auto 
+flex-col 
+lg:flex-row
+lg:even:flex-row-reverse 
+         "
+  >
+    <div
+      class="
+text-white 
+text-center 
+lg:text-left 
+max-w-md 
+flex-1
+"
+    >
+      <h3
+        class="
+text-4xl 
+sm:text-6xl 
+lg:text-7xl 
+mb-4 
+sm:mb-6 
+font-bold
+"
+      >
+        Title3
+      </h3>
+      <p
+        class="
+text-base 
+sm:text-xl 
+lg:text-2xl
+"
+      >
+        Text3
+      </p>
+    </div>
+    <div
+      class="
+box-border 
+flex 
+justify-center 
+items-center 
+max-w-[80%]
+lg:max-w-[50%] 
+xl:max-w-full
+"
+    >
+      <img
+        alt="Title3"
+        class="
+w-full 
+h-full
+"
+        src="http://cdn.com/photo3-name.jpg"
       />
     </div>
   </div>

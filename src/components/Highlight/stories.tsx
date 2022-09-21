@@ -1,5 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { Highlight } from '.'
+import { HighlightMock } from './mock'
 
 export default {
   title: 'Components/Highlight',
@@ -14,37 +15,34 @@ export default {
     },
   },
   args: {
-    title: 'Treine com orientação',
-    text: 'O fade app tornou possível conciliar as minhas viagens de trabalho com os meus treinos diário. Agora eu consigo treinar idependente do local em que eu esteja, sem gastar meus dados móveis.',
-    image:
-      'https://res.cloudinary.com/devjoseronaldo/image/upload/v1663089337/fadeapp/highlight1_ww2o69_b7fa61.png',
+    highlightItems: HighlightMock,
     inverterOrder: false,
     withLine: false,
   },
 } as ComponentMeta<typeof Highlight>
 
-const Template: ComponentStory<typeof Highlight> = (args) => (
+const ListTemplate: ComponentStory<typeof Highlight> = (args) => (
   <Highlight {...args} />
 )
 
-export const Default = Template.bind({})
+export const Default = ListTemplate.bind({})
 Default.args = {}
 
-export const WithLine = Template.bind({})
+export const WithLine = ListTemplate.bind({})
 WithLine.args = {
   withLine: true,
 }
 
-export const WithLineAndInverterOrder = Template.bind({})
+export const WithLineAndInverterOrder = ListTemplate.bind({})
 WithLineAndInverterOrder.args = {
   withLine: true,
   inverterOrder: true,
 }
 
-export const WithoutLine = Template.bind({})
+export const WithoutLine = ListTemplate.bind({})
 WithoutLine.args = {}
 
-export const WithoutLineAndInverterOrder = Template.bind({})
+export const WithoutLineAndInverterOrder = ListTemplate.bind({})
 WithoutLineAndInverterOrder.args = {
   inverterOrder: true,
 }

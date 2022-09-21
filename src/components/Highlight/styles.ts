@@ -24,16 +24,19 @@ export const highlightLineStyle = {
   after:bottom-0 
   after:h-1 
   after:w-3/5 
-  lg:after:w-4/5`,
+  lg:after:w-4/5
+  after:last:hidden
+  `,
 
-  left:'after:left-0',
-  right: 'after:right-0',
+  left:'after:odd:left-0 after:even:right-0',
+  right: 'after:even:left-0 after:odd:right-0',
 }
 export const imageContainerStyle = `
 box-border 
 flex 
 justify-center 
 items-center 
+max-w-[80%]
 lg:max-w-[50%] 
 xl:max-w-full
 `
