@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+import Image from 'next/image'
 import {
   ButtonSocialContainerStyle,
   ImgBoxStyle,
@@ -7,13 +7,13 @@ import {
 } from './styles'
 
 export interface ButtonSocialProps {
-  text: string
+  name: string
   urlIcon: string
   urlRedirect: string
 }
 
 export const ButtonSocial = ({
-  text,
+  name,
   urlIcon,
   urlRedirect,
 }: ButtonSocialProps) => {
@@ -25,9 +25,16 @@ export const ButtonSocial = ({
         target="_blank"
         rel="noreferrer"
       >
-        <img src={urlIcon} alt={text} className={ImgStyle} />
+        <Image
+          src={urlIcon}
+          alt={name}
+          className={ImgStyle}
+          layout="fixed"
+          width={38}
+          height={38}
+        />
       </a>
-      <span className={TextStyle}>{text}</span>
+      <span className={TextStyle}>{name}</span>
     </div>
   )
 }

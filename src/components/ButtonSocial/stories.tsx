@@ -1,5 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { ButtonSocial } from '.'
+import { socialMock } from './mock'
 
 export default {
   title: 'Components/ButtonSocial',
@@ -14,10 +15,9 @@ export default {
     },
   },
   args: {
-    text: 'instagram',
-    urlIcon:
-      'https://res.cloudinary.com/devjoseronaldo/image/upload/v1663340757/fadeapp/instagram_icon.svg',
-    urlRedirect: 'https://instagram.com/',
+    name: socialMock[0].name,
+    urlIcon: socialMock[0].urlIcon,
+    urlRedirect: socialMock[0].urlRedirect,
   },
 } as ComponentMeta<typeof ButtonSocial>
 
@@ -27,22 +27,3 @@ const Template: ComponentStory<typeof ButtonSocial> = (args) => (
 
 export const Default = Template.bind({})
 Default.args = {}
-
-export const Instagram = Template.bind({})
-Instagram.args = {}
-
-export const Youtube = Template.bind({})
-Youtube.args = {
-  text: 'youtube',
-  urlIcon:
-    'https://res.cloudinary.com/devjoseronaldo/image/upload/v1663341139/fadeapp/youtube_icon.svg',
-  urlRedirect: 'https://www.youtube.com/',
-}
-
-export const TikTok = Template.bind({})
-TikTok.args = {
-  text: 'tiktok',
-  urlIcon:
-    'https://res.cloudinary.com/devjoseronaldo/image/upload/v1663341172/fadeapp/tiktok_icon.svg',
-  urlRedirect: 'https://tiktok.com/',
-}
