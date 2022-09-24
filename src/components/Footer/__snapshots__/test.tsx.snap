@@ -1,0 +1,230 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> Should match snapshot 1`] = `
+<div>
+  <footer
+    class="
+flex
+flex-col
+justify-start
+items-center
+"
+  >
+    <h2
+      class="
+mb-8
+text-2xl
+font-medium
+text-white
+"
+    >
+      Title
+    </h2>
+    <div
+      class="
+mb-[4.5rem] 
+flex w-full 
+items-center 
+justify-center 
+gap-[3.4375rem]
+"
+    >
+      <div
+        class="
+flex 
+flex-col 
+items-center 
+gap-4
+"
+      >
+        <a
+          class="
+relative
+flex 
+h-16 
+w-16 
+items-center 
+justify-center 
+rounded-full 
+bg-primary 
+
+transition-all
+duration-300
+ease-in-out
+
+hover:scale-105
+
+before:absolute
+before:rounded-full
+before:content-['']
+before:w-0
+before:h-0
+before:transition-all
+before:ease-in-out
+before:duration-300
+
+before:bg-black/30
+
+hover:before:w-full
+hover:before:h-full
+hover:before:border-2
+hover:before:border-primary
+"
+          href="https://site.com/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="name"
+            src="https://res.cloudinary.com/user/icon.svg"
+          />
+        </a>
+        <span
+          class="
+text-sm 
+font-medium 
+capitalize 
+text-white
+"
+        >
+          name
+        </span>
+      </div>
+      <div
+        class="
+flex 
+flex-col 
+items-center 
+gap-4
+"
+      >
+        <a
+          class="
+relative
+flex 
+h-16 
+w-16 
+items-center 
+justify-center 
+rounded-full 
+bg-primary 
+
+transition-all
+duration-300
+ease-in-out
+
+hover:scale-105
+
+before:absolute
+before:rounded-full
+before:content-['']
+before:w-0
+before:h-0
+before:transition-all
+before:ease-in-out
+before:duration-300
+
+before:bg-black/30
+
+hover:before:w-full
+hover:before:h-full
+hover:before:border-2
+hover:before:border-primary
+"
+          href="https://site2.com/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="name2"
+            src="https://res.cloudinary.com/user/icon2.svg"
+          />
+        </a>
+        <span
+          class="
+text-sm 
+font-medium 
+capitalize 
+text-white
+"
+        >
+          name2
+        </span>
+      </div>
+      <div
+        class="
+flex 
+flex-col 
+items-center 
+gap-4
+"
+      >
+        <a
+          class="
+relative
+flex 
+h-16 
+w-16 
+items-center 
+justify-center 
+rounded-full 
+bg-primary 
+
+transition-all
+duration-300
+ease-in-out
+
+hover:scale-105
+
+before:absolute
+before:rounded-full
+before:content-['']
+before:w-0
+before:h-0
+before:transition-all
+before:ease-in-out
+before:duration-300
+
+before:bg-black/30
+
+hover:before:w-full
+hover:before:h-full
+hover:before:border-2
+hover:before:border-primary
+"
+          href="https://site3.com/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="name3"
+            src="https://res.cloudinary.com/user/icon3.svg"
+          />
+        </a>
+        <span
+          class="
+text-sm 
+font-medium 
+capitalize 
+text-white
+"
+        >
+          name3
+        </span>
+      </div>
+    </div>
+    <span
+      class="
+text-xs 
+text-gray-700
+font-normal
+"
+    >
+      © 
+      Company
+       - 
+      2022
+    </span>
+  </footer>
+</div>
+`;
