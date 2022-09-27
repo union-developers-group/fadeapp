@@ -37,7 +37,7 @@ module.exports = {
             },
             backgroundImage: {
                 'gradient-1': 'linear-gradient(180deg, #000006 0%, #212948 100%)',
-                'gradient-2': 'linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(33, 41, 72, 0.71) 0.01%, rgba(33, 41, 72, 0.5) 37.5%, #212948 72.4%)',
+                'gradient-2': 'linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(13, 24, 67, 0.71) 0.01%, rgba(3, 4, 7, 0.5) 37.5%, #070f2d 72.4%)',
                 'gradient-3': 'linear-gradient(180deg, #3B4571 0%, #212948 84.37%, #000000 99.48%)',
             },
             borderRadius: {
