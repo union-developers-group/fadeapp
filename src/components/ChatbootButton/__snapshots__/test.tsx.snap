@@ -30,6 +30,7 @@ exports[`<ChatbootButton /> should match snapshot 1`] = `
   focus:ring-0
   focus:ring-primary
   active:bg-transparent
+  z-50
   "
     >
       <span

@@ -9,6 +9,7 @@ export const ChatbootModalContainer = `
   flex
   flex-col
   animate-fade-in-down
+  z-50
 `
 export const ChatbootModalHeader = `
   bg-white

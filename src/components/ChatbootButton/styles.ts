@@ -24,6 +24,7 @@ export const ChatbootButtonStyle = `text-secondary
   focus:ring-0
   focus:ring-primary
   active:bg-transparent
+  z-50
   `
 
 export const ChatbootIconStyle = `
