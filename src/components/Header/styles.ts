@@ -15,6 +15,7 @@ export const navBarStyle = `
   py-4
   right-0
   top-0
+  z-50
 `
 
 export const navBarLogoStyle = `w-36 h-8 transition-all duration-700 ease-in-out`

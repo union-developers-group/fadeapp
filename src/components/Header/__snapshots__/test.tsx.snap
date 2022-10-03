@@ -21,6 +21,7 @@ exports[`<Header /> should match snapshot 1`] = `
   py-4
   right-0
   top-0
+  z-50
  lg:py-8 lg:bg-transparent"
     >
       <div
