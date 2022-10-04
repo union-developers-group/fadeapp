@@ -60,7 +60,7 @@ export const Slider = ({ data }: SliderProps) => {
             style={{
               transform: `translateX(${
                 -currentSlide *
-                (isTablet && !isDesktop ? 116 : isMobile ? 112 : 75)
+                (isTablet && !isDesktop ? 80 : isMobile ? 112 : 75)
               }%)`,
             }}
           >
