@@ -4,7 +4,7 @@ exports[`<PlanCard /> should match snapshot 1`] = `
 <div>
   <div
     class="
-relative w-[20.75rem] h-[32.125] text-white transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl
+relative w-[20.75rem] h-[32.125rem] text-white
 "
     style="background-image: url(http://cdn.com/photo-name.jpg);"
   >
