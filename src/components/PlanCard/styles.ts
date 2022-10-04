@@ -1,11 +1,11 @@
 export const Container = `
-relative w-[20.75rem] h-[32.125rem] text-white
+relative w-[20.75rem] h-[32.125rem] text-white bg-no-repeat bg-contain
 `
 export const OfferStyle = `
 absolute right-6 h-[5.62rem] w-[4rem] items-center bg-primary py-6 text-center text-4xl font-bold text-secondary rounded-xl rounded-t-none
 `
 export const ContentContainer = `
-flex h-[32rem] w-full max-w-[20.75rem] flex-col items-center justify-center gap-10 text-center sm:w-[20.875rem] bg-gradient-2
+flex h-full w-full max-w-[20.75rem] flex-col items-center justify-center gap-10 text-center sm:w-[20.875rem] bg-gradient-2
 `
 export const PriceContentContainer = `
 flex flex-col items-center
