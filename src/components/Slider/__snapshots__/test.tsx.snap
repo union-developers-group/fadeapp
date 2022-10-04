@@ -8,7 +8,7 @@ flex
 >
   <div
     class="
-hidden cursor-pointer md:flex
+hidden cursor-pointer lg:flex mr-[4.25rem]
 "
   >
     <img

@@ -19,7 +19,7 @@ whitespace-nowrap transition ease flex
 `
 
 export const ArrowContainer = `
-hidden cursor-pointer md:flex
+hidden cursor-pointer lg:flex mr-[4.25rem]
 `
 export const CarouselItem = `
 m-0 mr-[4rem] w-full md:mr-0 md:pl-[4rem] 
