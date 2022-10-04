@@ -4,6 +4,9 @@ exports[`<Slider /> should match snapshot 1`] = `
 <div
   class="
 flex
+max-w-full
+mt-[3rem]
+md:mt-[1.75rem]
 "
 >
   <div

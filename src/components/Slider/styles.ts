@@ -1,5 +1,8 @@
 export const CarouselContainer = `
 flex
+max-w-full
+mt-[3rem]
+md:mt-[1.75rem]
 `
 export const Carousel = `
  overflow-hidden
