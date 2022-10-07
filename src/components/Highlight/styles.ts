@@ -14,7 +14,7 @@ py-[3.75rem]
 mx-auto 
 flex-col 
 lg:flex-row
-lg:even:flex-row-reverse
+lg:odd:flex-row-reverse
 
 after:content-[""] 
 after:max-w-[55%]
@@ -24,8 +24,8 @@ after:bottom-0
 after:h-1 
 after:w-3/5 
 lg:after:w-4/5
-after:even:left-0 
-after:odd:right-0
+after:odd:left-0 
+after:even:right-0
 after:last:hidden
 `
 
