@@ -2,8 +2,8 @@ import { useState } from 'react'
 import { Icon } from '@iconify/react'
 import { Dialog } from '@headlessui/react'
 
-import { Input } from 'components/Input'
-import { Button } from 'components/Button'
+import { Input } from 'components/Form/Input'
+import { Button } from 'components/Buttons/Button'
 
 import {
   FormModalContainer,

@@ -1,5 +1,7 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { socialMock } from 'components/ButtonSocial/mock'
+
+import { socialMock } from 'components/Buttons/ButtonSocial/mock'
+
 import { Footer } from '.'
 
 export default {

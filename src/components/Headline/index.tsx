@@ -1,4 +1,5 @@
 import getHeading from './helpers/getHeading'
+
 import {
   HeadlineContainer,
   HeadlineContainerMax,

@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
-import { testimonialUsersMock } from 'components/TestimonialCard/mock'
+import { testimonialUsersMock } from 'components/Cards/TestimonialCard/mock'
 
 import { Slider } from '.'
 

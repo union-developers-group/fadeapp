@@ -6,7 +6,7 @@ import { useMediaQuery } from 'hooks/useMediaQuery'
 import {
   TestimonialCard,
   TestimonialCardProps,
-} from 'components/TestimonialCard'
+} from 'components/Cards/TestimonialCard'
 
 import {
   ArrowContainer,

@@ -1,4 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
+
 import { ButtonSocial } from '.'
 import { socialMock } from './mock'
 

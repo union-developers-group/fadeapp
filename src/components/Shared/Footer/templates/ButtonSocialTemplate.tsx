@@ -1,4 +1,7 @@
-import { ButtonSocial, ButtonSocialProps } from '../../ButtonSocial'
+import {
+  ButtonSocial,
+  ButtonSocialProps,
+} from 'components/Buttons/ButtonSocial'
 
 export const ButtonSocialTemplate = (ButtonSocialItem: ButtonSocialProps) => {
   const { name, urlIcon, urlRedirect } = ButtonSocialItem

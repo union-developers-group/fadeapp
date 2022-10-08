@@ -1,13 +1,13 @@
 import { Icon } from '@iconify/react'
 import { useState } from 'react'
 
+import { ChatbootModal } from 'components/Chatboot/ChatbootModal'
+
 import {
   ChatbootIconStyle,
   ChatbootButtonStyle,
   ChatbootLabelStyle,
 } from './styles'
-
-import { ChatbootModal } from 'components/ChatbootModal'
 
 export const ChatbootButton = () => {
   const [isOpenModal, setIsOpenModal] = useState(false)
