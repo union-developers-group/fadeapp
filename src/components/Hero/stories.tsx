@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { Hero } from '.'
-import { hero } from './mock'
+import { heroMock } from './mock'
 
 export default {
   title: 'Components/Hero',
@@ -18,9 +18,9 @@ const Template: ComponentStory<typeof Hero> = (args) => <Hero {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
-  headlineTitle: hero.headlineTitle,
-  subtitle: hero.subtitle,
-  textButton: hero.textButton,
-  tryText: hero.tryText,
-  image: hero.image,
+  headlineTitle: heroMock.headlineTitle,
+  subtitle: heroMock.subtitle,
+  textButton: heroMock.textButton,
+  tryText: heroMock.tryText,
+  image: heroMock.image,
 }
