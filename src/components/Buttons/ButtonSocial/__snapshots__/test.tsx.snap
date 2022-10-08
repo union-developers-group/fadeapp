@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ButtonSocial /> Should match snapshot 1`] = `
+<div>
+  <div
+    class="
+flex 
+flex-col 
+items-center 
+gap-4
+"
+  >
+    <a
+      class="
+relative
+flex 
+h-16 
+w-16 
+items-center 
+justify-center 
+rounded-full 
+bg-primary 
+
+transition-all
+duration-300
+ease-in-out
+
+hover:scale-105
+
+before:absolute
+before:rounded-full
+before:content-['']
+before:w-0
+before:h-0
+before:transition-all
+before:ease-in-out
+before:duration-300
+
+before:bg-black/30
+
+hover:before:w-full
+hover:before:h-full
+hover:before:border-2
+hover:before:border-primary
+"
+      href="https://instagram.com/"
+      rel="noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="instagram"
+        src="https://res.cloudinary.com/user/image/upload/img.png"
+      />
+    </a>
+    <span
+      class="
+text-sm 
+font-medium 
+capitalize 
+text-white
+"
+    >
+      instagram
+    </span>
+  </div>
+</div>
+`;

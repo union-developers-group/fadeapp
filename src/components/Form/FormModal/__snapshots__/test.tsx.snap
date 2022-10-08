@@ -1,0 +1,227 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormModal /> should match snapshot 1`] = `
+<div
+  aria-modal="true"
+  id="headlessui-dialog-7"
+  role="dialog"
+>
+  <div
+    class="
+  fixed
+  bg-white
+  top-1/2 
+  left-1/2 
+  -translate-x-1/2 
+  -translate-y-1/2
+  w-full
+  max-w-[28rem]
+  animate-fade-in-down
+  flex
+  flex-col
+  items-center
+  py-8
+  px-4
+  lg:px-12
+  rounded-[1.875rem]
+"
+    id="headlessui-dialog-panel-8"
+  >
+    <header
+      class="
+  w-full
+  mb-[1.6875rem]
+  flex
+  items-center
+  justify-center
+"
+    >
+      <h3
+        class="
+  font-bold
+  text-2xl
+  text-secondary
+"
+      >
+        Cadastre-se
+      </h3>
+      <button
+        class="
+  absolute
+  right-[1.4375rem]
+  top-[0.9375rem]
+"
+        tabindex="0"
+      >
+        <span />
+      </button>
+    </header>
+    <div
+      class="
+  w-full
+  max-w-[21.875rem]
+  flex
+  flex-col
+  mb-4
+"
+    >
+      <div
+        class="
+  box-border
+  overflow-hidden
+  max-h-max
+  odd:rounded-t-[0.625rem]
+  even:rounded-b-[0.625rem]
+  even:border-t-0
+  relative
+  flex
+  border
+  bg-white
+  border-solid 
+  border-secondary 
+  h-[2.875rem]
+"
+      >
+        <input
+          autocomplete="off"
+          class="
+  box-border
+  outline-0
+  overflow-hidden
+  w-full
+  absolute
+  rounded
+  bg-transparent
+  transition-all
+  duration-200
+  ease-in-out
+  pt-[16px]
+  pl-[0.5rem]
+  text-[1rem]
+  leading-[1.1875rem]
+  text-secondary
+  bottom-[0.4rem]
+"
+          id="name"
+          name="name"
+          type="text"
+          value=""
+        />
+        <label
+          class="
+            
+  box-border
+  overflow-hidden
+  absolute
+  text-gray-700
+  p-2
+  pointer-events-none 
+  transition-all 
+  duration-200 
+  ease-in-out\\"
+
+            top-1 text-[1.125rem] leading-[1.3125rem]
+          "
+          for="name"
+        >
+          Nome
+        </label>
+      </div>
+      <div
+        class="
+  box-border
+  overflow-hidden
+  max-h-max
+  odd:rounded-t-[0.625rem]
+  even:rounded-b-[0.625rem]
+  even:border-t-0
+  relative
+  flex
+  border
+  bg-white
+  border-solid 
+  border-secondary 
+  h-[2.875rem]
+"
+      >
+        <input
+          autocomplete="off"
+          class="
+  box-border
+  outline-0
+  overflow-hidden
+  w-full
+  absolute
+  rounded
+  bg-transparent
+  transition-all
+  duration-200
+  ease-in-out
+  pt-[16px]
+  pl-[0.5rem]
+  text-[1rem]
+  leading-[1.1875rem]
+  text-secondary
+  bottom-[0.4rem]
+"
+          id="email"
+          name="email"
+          type="email"
+          value=""
+        />
+        <label
+          class="
+            
+  box-border
+  overflow-hidden
+  absolute
+  text-gray-700
+  p-2
+  pointer-events-none 
+  transition-all 
+  duration-200 
+  ease-in-out\\"
+
+            top-1 text-[1.125rem] leading-[1.3125rem]
+          "
+          for="email"
+        >
+          Email
+        </label>
+      </div>
+    </div>
+    <p
+      class="
+  mb-4
+  text-center
+  text-xs
+  text-gray-700
+"
+    >
+      Enviaremos um email para confirmar o seu endereço . 
+      <br />
+      Leia a
+       
+      <a
+        class="
+  font-bold
+  text-secondary
+"
+        href="#"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Política de Privacidade.
+      </a>
+    </p>
+    <button
+      class="flex items-center justify-center rounded-10 bg-primary font-bold text-secondary transition hover:text-primary hover:bg-transparent border-2 border-primary transition-color py-3 w-[22.188rem] text-lg h-[2.813rem] 
+  w-full 
+  max-w-[21.875rem]
+"
+    >
+      Continuar
+    </button>
+  </div>
+</div>
+`;
