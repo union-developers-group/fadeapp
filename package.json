@@ -1,5 +1,6 @@
 {
-  "name": "boilerplate-next-with-tailwindcss",
+  "name": "fadeapp",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
