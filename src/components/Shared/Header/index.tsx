@@ -2,13 +2,13 @@ import { useEffect, useState } from 'react'
 import { Icon } from '@iconify/react'
 import { Menu, Transition } from '@headlessui/react'
 
+import { Logo } from 'components/Shared/Logo'
+
 import {
   DesktopMenuTemplate,
   MenuProps,
   MobileMenuTemplate,
 } from './templates/menuTemplate'
-
-import { Logo } from 'components/Logo'
 
 import {
   navBarStyle,

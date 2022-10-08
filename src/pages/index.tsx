@@ -2,12 +2,12 @@ import { GetStaticProps } from 'next'
 
 import { MainLayout, MainLayoutProps } from 'layout/Main'
 
-import { menuMock } from 'components/Header/mock'
+import { menuMock } from 'components/Shared/Header/mock'
 import { heroMock } from 'components/Hero/mock'
 import { HighlightMock } from 'components/Highlight/mock'
-import { testimonialUsersMock } from 'components/TestimonialCard/mock'
-import { socialMock } from 'components/ButtonSocial/mock'
-import { plansMock } from 'components/PlanCard/mock'
+import { testimonialUsersMock } from 'components/Cards/TestimonialCard/mock'
+import { socialMock } from 'components/Buttons/ButtonSocial/mock'
+import { plansMock } from 'components/Cards/PlanCard/mock'
 
 export default function Main(props: MainLayoutProps) {
   return <MainLayout {...props} />

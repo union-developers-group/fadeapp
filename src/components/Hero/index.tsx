@@ -1,6 +1,5 @@
-import { Button } from 'components/Button'
+import { Button } from 'components/Buttons/Button'
 import { Headline } from 'components/Headline'
-
 
 import {
   ButtonContainer,

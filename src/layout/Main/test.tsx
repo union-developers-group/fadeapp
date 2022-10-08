@@ -1,10 +1,11 @@
 import { render, screen } from '@testing-library/react'
-import { socialMock } from 'components/ButtonSocial/mock'
-import { menuMock } from 'components/Header/mock'
+
+import { socialMock } from 'components/Buttons/ButtonSocial/mock'
+import { menuMock } from 'components/Shared/Header/mock'
 import { heroMock } from 'components/Hero/mock'
 import { HighlightMock } from 'components/Highlight/mock'
-import { plansMock } from 'components/PlanCard/mock'
-import { testimonialUsersMock } from 'components/TestimonialCard/mock'
+import { plansMock } from 'components/Cards/PlanCard/mock'
+import { testimonialUsersMock } from 'components/Cards/TestimonialCard/mock'
 
 import { MainLayout, MainLayoutProps } from '.'
 
@@ -30,14 +31,14 @@ const data: MainLayoutProps = {
   },
 }
 
-jest.mock('components/Header', () => ({
+jest.mock('components/Shared/Header', () => ({
   __esModule: true,
   Header: function Mock({ children }: { children: React.ReactNode }) {
     return <div data-testid="Mock Header">{children}</div>
   },
 }))
 
-jest.mock('components/ChatbootButton', () => ({
+jest.mock('components/Chatboot/ChatbootButton', () => ({
   __esModule: true,
   ChatbootButton: function Mock({ children }: { children: React.ReactNode }) {
     return <div data-testid="Mock ChatbootButton">{children}</div>
@@ -65,14 +66,14 @@ jest.mock('components/Slider', () => ({
   },
 }))
 
-jest.mock('components/PlanCard', () => ({
+jest.mock('components/Cards/PlanCard', () => ({
   __esModule: true,
   PlanCard: function Mock({ children }: { children: React.ReactNode }) {
     return <div data-testid="Mock PlanCard">{children}</div>
   },
 }))
 
-jest.mock('components/Footer', () => ({
+jest.mock('components/Shared/Footer', () => ({
   __esModule: true,
   Footer: function Mock({ children }: { children: React.ReactNode }) {
     return <div data-testid="Mock Footer">{children}</div>

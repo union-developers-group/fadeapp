@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react'
-import { ButtonSocialProps } from 'components/ButtonSocial'
+
+import { ButtonSocialProps } from 'components/Buttons/ButtonSocial'
 
 import { Footer } from '.'
 

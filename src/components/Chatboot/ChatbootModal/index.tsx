@@ -2,11 +2,13 @@ import { useState } from 'react'
 import { Icon } from '@iconify/react'
 import { Dialog } from '@headlessui/react'
 
-import { Logo } from 'components/Logo'
+import { Logo } from 'components/Shared/Logo'
 
 import { botMessages, personMessages } from './mock'
+
 import { BotMessageTemplate } from './templates/BotMessageTemplate'
 import { PersonMessageTemplate } from './templates/PersonMessageTemplate'
+
 import {
   ChatbootModalContainer,
   ChatbootModalSendButton,

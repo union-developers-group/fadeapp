@@ -1,4 +1,4 @@
-import { PlanCard, PlanCardProps } from 'components/PlanCard'
+import { PlanCard, PlanCardProps } from 'components/Cards/PlanCard'
 
 export const PlanCardTemplate = (planCard: PlanCardProps) => {
   return (

@@ -1,4 +1,4 @@
-import { Button } from 'components/Button'
+import { Button } from 'components/Buttons/Button'
 
 import { formatPrice } from 'utils/formatPrice'
 
@@ -68,7 +68,7 @@ export const PlanCard = ({
             )} por ${isMonthly ? 'semana' : 'mês'})`}</p>
           )}
         </div>
-        
+
         <div className={ButtonContainer}>
           <Button size="small">{buttonText}</Button>
           <p className={RenewStyles}>Renovação automática</p>

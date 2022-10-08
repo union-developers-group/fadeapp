@@ -1,5 +1,6 @@
+import { ButtonSocialProps } from 'components/Buttons/ButtonSocial'
+
 import { ButtonSocialTemplate } from './templates/ButtonSocialTemplate'
-import { ButtonSocialProps } from '../ButtonSocial'
 
 import {
   FooterContainer,
