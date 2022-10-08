@@ -1,5 +1,6 @@
 import { PlanCardProps } from '.'
-export const plans = [
+
+export const plansMock = [
   {
     planType: 'Semanal',
     price: 9.99,

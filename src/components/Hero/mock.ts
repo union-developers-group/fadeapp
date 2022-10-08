@@ -1,6 +1,6 @@
 import { HeroProps } from '.'
 
-export const hero = {
+export const heroMock = {
   headlineTitle: 'Construa seu shape sem atrapalhar a sua rotina',
   subtitle:
     'Seu treino personalizado, na palma da sua mão, a qualquer hora e lugar.',
