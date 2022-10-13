@@ -28,7 +28,7 @@ export const Hero = ({
   return (
     <div className={HeroContainer} style={{ backgroundImage: `url(${image})` }}>
       <div className={TitleContainer}>
-        <Headline title={headlineTitle} />
+        <Headline as="h1" title={headlineTitle} />
 
         <p className={Subtitle}>{subtitle}</p>
 
