@@ -1,13 +1,13 @@
 export const FormModalContainer = `
   fixed
   bg-white
-  top-1/2 
-  left-1/2 
   -translate-x-1/2 
   -translate-y-1/2
+  animate-fade-in
+  top-1/2 
+  left-1/2 
   w-full
   max-w-[28rem]
-  animate-fade-in-down
   flex
   flex-col
   items-center

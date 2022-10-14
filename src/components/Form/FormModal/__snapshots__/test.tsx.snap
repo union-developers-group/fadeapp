@@ -3,20 +3,20 @@
 exports[`<FormModal /> should match snapshot 1`] = `
 <div
   aria-modal="true"
-  id="headlessui-dialog-7"
+  id="headlessui-dialog-3"
   role="dialog"
 >
   <div
     class="
   fixed
   bg-white
-  top-1/2 
-  left-1/2 
   -translate-x-1/2 
   -translate-y-1/2
+  animate-fade-in
+  top-1/2 
+  left-1/2 
   w-full
   max-w-[28rem]
-  animate-fade-in-down
   flex
   flex-col
   items-center
@@ -25,7 +25,7 @@ exports[`<FormModal /> should match snapshot 1`] = `
   lg:px-12
   rounded-[1.875rem]
 "
-    id="headlessui-dialog-panel-8"
+    id="headlessui-dialog-panel-4"
   >
     <header
       class="
