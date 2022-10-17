@@ -3,7 +3,7 @@ flex
 flex-col
 md:flex-row
 lg:w-[54.813rem]
-w-max
+w-full
 relative
 justify-center
 ml-7
@@ -11,7 +11,8 @@ lg:ml-0
 `
 export const nameStyle = `
 md:absolute
-w-[18.75rem]
+w-[16rem]
+md:w-[18.75rem]
 md:left-[1.875rem]
 md:top-[3.438rem]
 text-white
@@ -41,7 +42,8 @@ text-base
 md:text-lg
 md:top-[6.875rem]
 md:left-[-6.875rem]
-w-[18.75rem]
+w-[16rem]
+md:w-[18.75rem]
 `
 
 export const photoContainerStyle = `

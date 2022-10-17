@@ -5,7 +5,7 @@ exports[`<Headline /> should match snapshot 1`] = `
   <div
     class="
 relative flex flex-col text-white  
-  min-w-[25.25rem] 
+  md:min-w-[25.25rem] 
 items-start"
   >
     <h2
