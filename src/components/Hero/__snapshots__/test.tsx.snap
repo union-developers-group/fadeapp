@@ -10,13 +10,13 @@ flex h-[38rem] md:h-[48.25rem] p-[1rem] w-full flex-col items-center bg-center b
   >
     <div
       class="
-flex w-[27.75rem] flex-col items-center text-center md:text-left  justify-center md:items-start md:justify-start
+flex w-full max-w-[27.75rem] flex-col items-center text-center md:text-left justify-center md:items-start md:justify-start
 "
     >
       <div
         class="
 relative flex flex-col text-white  
-  min-w-[25.25rem] 
+  md:min-w-[25.25rem] 
 items-start"
       >
         <h2
@@ -36,12 +36,12 @@ mb-5 md:w-[26rem] w-[20rem] mt-3 text-center md:text-xxl text-xl font-normal tex
       </p>
       <div
         class="
- flex flex-col last:items-center w-[18.31rem] md:w-[21.25rem]
+ flex flex-col last:items-center max-w-[18.31rem] md:w-[21.25rem]
 "
       >
         <button
           class="flex items-center justify-center rounded-10 bg-primary font-bold text-secondary transition hover:text-primary hover:bg-transparent border-2 border-primary transition-color py-4 w-[21.5rem] text-lg h-[3.625rem] 
-w-[18.31rem] md:w-[21.25rem]
+max-w-[18.31rem] md:w-[21.25rem]
 "
         >
           EU QUERO

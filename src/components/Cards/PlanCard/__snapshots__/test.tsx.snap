@@ -4,13 +4,13 @@ exports[`<PlanCard /> should match snapshot 1`] = `
 <div>
   <div
     class="
-relative w-[20.75rem] h-[32.125rem] text-white bg-no-repeat bg-contain
+relative h-full w-[18rem] md:w-[20.75rem] sm:w-full h-[32.125rem] text-white bg-no-repeat bg-contain
 "
     style="background-image: url(http://cdn.com/photo-name.jpg);"
   >
     <div
       class="
-flex h-full w-full max-w-[20.75rem] flex-col items-center justify-center gap-10 text-center sm:w-[20.875rem] bg-gradient-2
+flex h-full w-[18rem] max-w-[19rem] md:max-w-[20.75rem] flex-col items-center justify-center gap-10 text-center sm:w-[20.875rem] bg-gradient-2
 "
     >
       <div
