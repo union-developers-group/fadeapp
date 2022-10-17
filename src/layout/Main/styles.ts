@@ -22,7 +22,7 @@ export const TryStyles = `text-2xl font-semibold text-primary md:text-4xl`
 
 export const LineContainer = `flex items-center justify-center gap-3`
 
-export const LineStyle = `h-[0.5rem] w-[9rem] bg-primary md:w-[12rem]`
+export const LineStyle = `h-[0.5rem] w-[8rem] bg-primary md:w-[12rem]`
 
 export const OrText = `text-2xl text-white md:text-4xl`
 

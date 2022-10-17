@@ -32,7 +32,7 @@ describe('<Headline />', () => {
       <Headline as="h4" withLine lineSize="medium" title="Hello World" />,
     )
 
-    expect(container.firstChild).toHaveClass('min-w-[25.25rem]')
+    expect(container.firstChild).toHaveClass('md:min-w-[25.25rem]')
 
     rerender(<Headline as="h5" withLine lineSize="large" title="Hello World" />)
 
