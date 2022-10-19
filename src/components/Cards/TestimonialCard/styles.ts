@@ -1,20 +1,21 @@
 export const testimonialCardStyle = `
+py-2
 flex
 flex-col
-md:flex-row
-lg:w-[54.813rem]
+h-full
 w-full
 relative
-justify-center
+justify-between
 ml-7
 lg:ml-0
+
+md:flex-row
+md:w-[51.813rem]
+md:justify-center
+lg:w-[54.813rem]
 `
 export const nameStyle = `
-md:absolute
 w-[16rem]
-md:w-[18.75rem]
-md:left-[1.875rem]
-md:top-[3.438rem]
 text-white
 break-words
 overflow-hidden
@@ -23,9 +24,14 @@ mb-4
 md:mb-0
 text-center
 font-medium
-md:text-left
 text-2xl
 box-border
+
+md:absolute
+md:text-left
+md:w-[18.75rem]
+md:left-[1.875rem]
+md:top-[3.438rem]
 `
 
 export const messageStyle = `
@@ -35,15 +41,16 @@ overflow-hidden
 max-h-[160px]
 text-center
 mb-8
-md:mb-0
-md:text-left
 relative
 text-base
+w-[16rem]
+
+md:mb-0
+md:text-left
 md:text-lg
 md:top-[6.875rem]
 md:left-[-6.875rem]
-w-[16rem]
-md:w-[18.75rem]
+lg:w-[18.75rem]
 `
 
 export const photoContainerStyle = `
@@ -58,19 +65,17 @@ rounded-10
 md:left-[-2.125rem]
 shadow-[0.5rem_0.5rem_0rem_0rem_rgba(33,231,182)]
 
-
 after:content-[' ']
 after:block
 after:absolute
 after:h-[0.25rem]
-after:w-[1.875rem]
+after:w-[5.875rem]
 after:top-[11.25rem]
-after:right-[-1.875rem]
+after:right-[-5.875rem]
 md:after:w-[10.75rem]
 md:after:top-[5.625rem]
 md:after:right-[-10.75rem]
 after:bg-primary
-
 
 before:content-[' ']
 before:block

@@ -2,6 +2,7 @@ import { TestimonialCardProps } from '.'
 
 export const testimonialUsersMock = [
   {
+    id: '0',
     name: 'Rodrigo',
     message: `
       O fade app tornou possível conciliar as minhas viagens de trabalho com os meus treinos diário. Agora eu consigo treinar idependente do local em que eu esteja, sem gastar meus dados móveis.
@@ -10,6 +11,7 @@ export const testimonialUsersMock = [
       'https://res.cloudinary.com/dbnq26wqe/image/upload/v1660855863/others/unsplash_AtfA8NDgpKA_etbupr.jpg',
   },
   {
+    id: '1',
     name: 'Luiza',
     message: `
     Para quem não frequenta academia é perfeiro. Ele organiza meus treino em casa adaptando os treinos.
@@ -18,6 +20,7 @@ export const testimonialUsersMock = [
       'https://res.cloudinary.com/dbnq26wqe/image/upload/v1660855863/others/unsplash_lrQPTQs7nQQ_vp5lrh.jpg',
   },
   {
+    id: '2',
     name: 'Flávio',
     message: `
     Eu assisto e baixo os treinos em casa para fazer os exercícios de forma correta na academia.
@@ -26,6 +29,7 @@ export const testimonialUsersMock = [
       'https://res.cloudinary.com/dbnq26wqe/image/upload/v1660855863/others/unsplash_7kEpUPB8vNk_n8arrp.jpg',
   },
   {
+    id: '3',
     name: 'Rebeca',
     message: `
     Eu amo poder integrar as playlists que eu mais gosto com os meus exercícios.
