@@ -1,11 +1,13 @@
-![Union Group](https://res.cloudinary.com/dbnq26wqe/image/upload/v1644082143/others/LOGO_GRUPO_4-removebg-preview_k3ptag.png)
+![logo](https://user-images.githubusercontent.com/78116908/197075464-e0b5d175-8325-42cd-939b-efcf711f91bf.png)
+
 
 
 ![project](https://user-images.githubusercontent.com/78116908/196817145-5bded60b-8b04-4445-a01d-20768f922fc3.png)
 
 ## Objetivo
 
-Estudar e aprimorar as habilidades no desenvolvimento web, simulando uma aplicação real por meio de Boas Práticas de Código, Testes, Documentação com Storybook e Metodologias Ágeis com SCRUM. Tudo isso aliado a prática de Trabalho em Equipe, ensinando e aprendendo com os colegas.
+Uma landing page para um app que é seu parceiro durante os seus exercícios físicos, oferecendo funcionalidades para deixar as atividades mais divertidas durante o seu treino.
+
 
 ## Tecnologias
 
