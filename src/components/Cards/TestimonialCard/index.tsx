@@ -1,14 +1,24 @@
 import Image from 'next/image'
 
-import { messageStyle, photoContainerStyle, nameStyle, testimonialCardStyle } from "./styles"
+import {
+  messageStyle,
+  photoContainerStyle,
+  nameStyle,
+  testimonialCardStyle,
+} from './styles'
 
 export interface TestimonialCardProps {
+  id?: string
   name: string
   message: string
   image: string | StaticImageData
 }
 
-export const TestimonialCard = ({ name, message, image }: TestimonialCardProps) => {
+export const TestimonialCard = ({
+  name,
+  message,
+  image,
+}: TestimonialCardProps) => {
   return (
     <div className={testimonialCardStyle}>
       <h3 className={nameStyle}>{name}</h3>
