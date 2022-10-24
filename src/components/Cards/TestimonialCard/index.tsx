@@ -8,6 +8,7 @@ import {
 } from './styles'
 
 export interface TestimonialCardProps {
+  id?: string
   name: string
   message: string
   image: string | StaticImageData
