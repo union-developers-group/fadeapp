@@ -19,13 +19,13 @@ relative flex flex-col text-white
   md:min-w-[25.25rem] 
 items-start"
       >
-        <h2
+        <h1
           class="
   text-4xl font-bold lg:text-7xl 
 } "
         >
           Construa seu shape sem atrapalhar a sua rotina
-        </h2>
+        </h1>
       </div>
       <p
         class="
