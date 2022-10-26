@@ -1,0 +1,9 @@
+export interface {{pascalCase name}}Props {
+  title: string
+}
+
+export const {{name}}Mapper = ({{name}}: {{pascalCase name}}Props[]) => {
+  return {{name}}.map((item) => ({
+    test: item.title,
+  }))
+}
