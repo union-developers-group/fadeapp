@@ -29,5 +29,5 @@ m-0 mr-[4rem] w-full md:mr-0 md:pl-[4rem]
 `
 
 export const CarouselSlide = `
-ease flex  w-full transition items-end
+ease flex h-full w-full transition items-end
 `

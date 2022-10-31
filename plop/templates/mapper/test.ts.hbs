@@ -1,0 +1,23 @@
+import { {{name}}Mapper, {{pascalCase name}}Props } from "."
+
+describe('{{name}}Mapper', () => {
+  it('should return the right format when mapped', () => {
+    const {{name}} = [
+      {
+        title: 'Home',
+      },
+      {
+        title: 'Projetos',
+      },
+    ] as {{pascalCase name}}Props[]
+
+    expect({{name}}Mapper({{name}})).toStrictEqual([
+      {
+        test: 'Home',
+      },
+      {
+        test: 'Projetos',
+      },
+    ])
+  })
+})
