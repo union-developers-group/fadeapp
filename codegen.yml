@@ -1,0 +1,9 @@
+overwrite: true
+schema: 'https://api-sa-east-1.hygraph.com/v2/cl91z5pts2gpr01tchilleqhk/master'
+documents: 'src/**/*.tsx'
+generates:
+  src/graphql/generated/gql:
+    preset: 'client'
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
