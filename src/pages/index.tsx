@@ -8,12 +8,27 @@ import { HighlightMock } from 'components/Highlight/mock'
 import { testimonialUsersMock } from 'components/Cards/TestimonialCard/mock'
 import { socialMock } from 'components/Buttons/ButtonSocial/mock'
 import { plansMock } from 'components/Cards/PlanCard/mock'
+import { client } from 'services/client'
+import { gql } from '@apollo/client'
 
 export default function Main(props: MainLayoutProps) {
   return <MainLayout {...props} />
 }
 
 export const getStaticProps: GetStaticProps = async () => {
+  const { data } = await client.query({
+    query: gql`
+      query GET_MAIN {
+        menus {
+          name
+          link
+        }
+      }
+    `,
+  })
+
+  console.log(data)
+
   return {
     props: {
       menu: menuMock,

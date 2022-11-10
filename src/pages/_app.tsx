@@ -1,11 +1,14 @@
 import 'styles/globals.css'
 
-import type { AppProps } from 'next/app'
 import Head from 'next/head'
+import type { AppProps } from 'next/app'
+import { ApolloProvider } from '@apollo/client'
+
+import { client } from 'services/client'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <ApolloProvider client={client}>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Fadeapp - Seu parceiro de atividade</title>
@@ -28,7 +31,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
       </Head>
       <Component {...pageProps} />
-    </>
+    </ApolloProvider>
   )
 }
 
