@@ -9,6 +9,9 @@ flex h-[38rem] md:h-[48.25rem] p-[1rem] w-full flex-col items-center bg-center b
     style="background-image: url(http://www.cdn.com/background.png);"
   >
     <div
+      style="position: absolute; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px; display: none;"
+    />
+    <div
       class="
 flex w-full max-w-[27.75rem] flex-col items-center text-center md:text-left justify-center md:items-start md:justify-start
 "

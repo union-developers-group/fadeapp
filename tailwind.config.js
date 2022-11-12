@@ -53,6 +53,14 @@ module.exports = {
         10: '10px',
       },
       keyframes: {
+        'fade-in': {
+          '0%': {
+            opacity: '0',
+          },
+          '100%': {
+            opacity: '1',
+          },
+        },
         'fade-in-down': {
           '0%': {
             opacity: '0',
@@ -65,6 +73,7 @@ module.exports = {
         },
       },
       animation: {
+        'fade-in': 'fade-in 0.3s ease-out',
         'fade-in-down': 'fade-in-down 0.3s ease-out',
       },
     },

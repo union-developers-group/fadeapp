@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-empty-function */
-import { fireEvent, render, screen } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 
 import { FormModal } from '.'
 
@@ -22,9 +22,12 @@ global.IntersectionObserver = class IntersectionObserver {
   }
 } as any
 
+const isOpen = true
+const mockedSetIsOpen = jest.fn()
+
 describe('<FormModal />', () => {
   it('Should render FormModal', () => {
-    render(<FormModal />)
+    render(<FormModal isOpen={isOpen} setIsOpen={mockedSetIsOpen} />)
 
     const modal = getByRole('dialog')
     const [closeModalButton, submitButton] = getAllByRole('button')
@@ -42,35 +45,8 @@ describe('<FormModal />', () => {
     expect(link).toBeInTheDocument()
   })
 
-  it('Should close modal on icon click ', () => {
-    render(<FormModal />)
-
-    const modal = getByRole('dialog')
-    const [closeModalButton] = getAllByRole('button')
-
-    expect(modal).toBeInTheDocument()
-
-    fireEvent.click(closeModalButton)
-
-    expect(modal).not.toBeInTheDocument()
-  })
-
-  it('Should close modal on press ESC', () => {
-    render(<FormModal />)
-
-    const modal = getByRole('dialog')
-
-    expect(modal).toBeInTheDocument()
-
-    fireEvent.keyDown(modal, {
-      key: 'Escape',
-    })
-
-    expect(modal).not.toBeInTheDocument()
-  })
-
   it('should match snapshot', () => {
-    render(<FormModal />)
+    render(<FormModal isOpen={isOpen} setIsOpen={mockedSetIsOpen} />)
 
     const modal = getByRole('dialog')
 

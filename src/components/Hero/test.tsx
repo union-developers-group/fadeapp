@@ -1,4 +1,8 @@
-import { render, screen } from '@testing-library/react'
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-empty-function */
+import { fireEvent, render, screen, waitFor } from '@testing-library/react'
+
+const { getByRole, getByText, queryByRole } = screen
 
 import { Hero, HeroProps } from '.'
 
@@ -11,7 +15,21 @@ const data: HeroProps = {
   image: 'http://www.cdn.com/background.png',
 }
 
-const { getByRole, getByText } = screen
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
+
+  observe() {
+    return null
+  }
+
+  disconnect() {
+    return null
+  }
+
+  unobserve() {
+    return null
+  }
+} as any
 
 describe('<Hero />', () => {
   it('should render the hero', () => {
@@ -26,6 +44,7 @@ describe('<Hero />', () => {
     const tryText = getByText('Experimente 7 dias Grátis')
     const button = getByRole('button', { name: 'EU QUERO' })
     const image = container.firstChild
+    const modal = queryByRole('dialog')
 
     expect(headline).toBeInTheDocument()
     expect(subtitle).toBeInTheDocument()
@@ -34,6 +53,21 @@ describe('<Hero />', () => {
       'background-image: url(http://www.cdn.com/background.png)',
     )
     expect(button).toBeInTheDocument()
+    expect(modal).not.toBeInTheDocument()
+  })
+
+  it('Should open modal on button click', async () => {
+    render(<Hero {...data} />)
+
+    const button = getByRole('button', { name: 'EU QUERO' })
+
+    fireEvent.click(button)
+
+    await waitFor(() => {
+      const modal = getByRole('dialog')
+
+      expect(modal).toBeInTheDocument()
+    })
   })
 
   it('should match snapshot', () => {
