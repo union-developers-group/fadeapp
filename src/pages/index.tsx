@@ -7,6 +7,8 @@ import { client } from 'services/client'
 import { GET_MAIN } from 'graphql/queries'
 import { GetMainQuery } from 'graphql/generated/graphql'
 
+import { menuMapper } from 'mappers/menu'
+
 export default function Main(props: MainLayoutProps) {
   return <MainLayout {...props} />
 }
@@ -28,10 +30,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      menu: menus.map((menu) => ({
-        name: menu.name,
-        route: `/#${menu.link}`,
-      })),
+      menu: menuMapper(menus),
       hero: {
         headlineTitle: heroes[0].title,
         subtitle: heroes[0].subtitle,
