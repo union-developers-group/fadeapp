@@ -10,8 +10,9 @@ export const ChatbootButtonStyle = `text-secondary
   h-[3.125rem]
   lg:w-[3.75rem]
   lg:h-[3.75rem]
-  bottom-[5.375rem]
+  bottom-[0.5rem]
   right-[1.563rem]
+  xs:bottom-[5.375rem]
   lg:bottom-[3.563rem]
   lg:right-[3.563rem]
   hover:bg-transparent
@@ -40,7 +41,8 @@ export const ChatbootLabelStyle = `
   lg:text-xl
   fixed
   right-[2rem]
-  bottom-[9rem]
+  bottom-[4rem]
+  xs:bottom-[9rem]
   lg:bottom-[8rem]
   lg:right-[4.3rem]
   leading-6

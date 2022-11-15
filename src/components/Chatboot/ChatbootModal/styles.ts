@@ -1,7 +1,9 @@
 export const ChatbootModalContainer = `
   fixed
-  bottom-[8.1rem]
-  right-[5.563rem]
+  bottom-[7.1rem]
+  right-[1.4rem]
+  xs:bottom-[8.1rem]
+  xs:right-[5.563rem]
   lg:bottom-[6.363rem]
   lg:right-[9.563rem]
   w-[17.568rem]
