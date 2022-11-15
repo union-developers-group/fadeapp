@@ -16,6 +16,7 @@ export const GET_MAIN = gql`
       }
     }
     highlights {
+      id
       title
       text
       image {
@@ -23,6 +24,7 @@ export const GET_MAIN = gql`
       }
     }
     testimonialCards {
+      id
       name
       message
       image {

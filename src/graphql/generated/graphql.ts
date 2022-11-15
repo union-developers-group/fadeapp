@@ -9223,7 +9223,7 @@ export enum _SystemDateTimeFieldVariation {
 export type GetMainQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetMainQuery = { __typename?: 'Query', menus: Array<{ __typename?: 'Menu', name: string, link: string }> };
+export type GetMainQuery = { __typename?: 'Query', menus: Array<{ __typename?: 'Menu', name: string, link: string }>, heroes: Array<{ __typename?: 'Hero', title: string, subtitle: string, textButton: string, tryText: string, image: { __typename?: 'Asset', url: string } }>, highlights: Array<{ __typename?: 'Highlight', id: string, title: string, text: string, image: { __typename?: 'Asset', url: string } }>, testimonialCards: Array<{ __typename?: 'TestimonialCard', id: string, name: string, message: string, image: { __typename?: 'Asset', url: string } }>, abouts: Array<{ __typename?: 'About', text: string, background: { __typename?: 'Asset', url: string } }>, planSections: Array<{ __typename?: 'PlanSection', tryText: string, plans: Array<{ __typename?: 'PlanCard', plan: PlanType, price: number, promotional?: boolean | null, equivalentValue?: number | null, promotionalPrice?: number | null, buttonText: string, image: { __typename?: 'Asset', url: string } }> }>, footers: Array<{ __typename?: 'Footer', companyName: string, title: string, socials: Array<{ __typename?: 'Social', name: string, link: string, image: { __typename?: 'Asset', url: string } }> }> };
 
 
 export const GetMainDocument = gql`
@@ -9231,6 +9231,62 @@ export const GetMainDocument = gql`
   menus {
     name
     link
+  }
+  heroes {
+    title
+    subtitle
+    textButton
+    tryText
+    image {
+      url
+    }
+  }
+  highlights {
+    id
+    title
+    text
+    image {
+      url
+    }
+  }
+  testimonialCards {
+    id
+    name
+    message
+    image {
+      url
+    }
+  }
+  abouts {
+    text
+    background {
+      url
+    }
+  }
+  planSections {
+    plans {
+      plan
+      price
+      promotional
+      equivalentValue
+      promotionalPrice
+      buttonText
+      image {
+        url
+      }
+    }
+    tryText
+  }
+  footers {
+    socials {
+      name
+      link
+      image {
+        url
+      }
+    }
+    companyName
+    title
   }
 }
     `;

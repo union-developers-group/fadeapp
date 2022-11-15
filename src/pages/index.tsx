@@ -2,13 +2,6 @@ import { GetStaticProps } from 'next'
 
 import { MainLayout, MainLayoutProps } from 'layout/Main'
 
-import { menuMock } from 'components/Shared/Header/mock'
-import { heroMock } from 'components/Hero/mock'
-import { HighlightMock } from 'components/Highlight/mock'
-import { testimonialUsersMock } from 'components/Cards/TestimonialCard/mock'
-import { socialMock } from 'components/Buttons/ButtonSocial/mock'
-import { plansMock } from 'components/Cards/PlanCard/mock'
-
 import { client } from 'services/client'
 
 import { GET_MAIN } from 'graphql/queries'
@@ -19,31 +12,69 @@ export default function Main(props: MainLayoutProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { data } = await client.query<GetMainQuery>({
+  const {
+    data: {
+      menus,
+      heroes,
+      highlights,
+      testimonialCards,
+      abouts,
+      planSections,
+      footers,
+    },
+  } = await client.query<GetMainQuery>({
     query: GET_MAIN,
   })
 
-  console.log(data)
-
   return {
     props: {
-      menu: menuMock,
-      hero: heroMock,
-      highlights: HighlightMock,
-      testimonials: testimonialUsersMock,
+      menu: menus.map((menu) => ({
+        name: menu.name,
+        route: `/#${menu.link}`,
+      })),
+      hero: {
+        headlineTitle: heroes[0].title,
+        subtitle: heroes[0].subtitle,
+        textButton: heroes[0].textButton,
+        tryText: heroes[0].tryText,
+        image: heroes[0].image.url,
+      },
+      highlights: highlights.map((highlight) => ({
+        id: highlight.id,
+        title: highlight.title,
+        text: highlight.text,
+        image: highlight.image.url,
+      })),
+      testimonials: testimonialCards.map((testimonialCard) => ({
+        id: testimonialCard.id,
+        name: testimonialCard.name,
+        message: testimonialCard.message,
+        image: testimonialCard.image.url,
+      })),
       aboutSection: {
-        background:
-          'https://res.cloudinary.com/dbnq26wqe/image/upload/v1665003925/others/Rectangle_42_1_croz7y.jpg',
-        text: 'O fade app é ideal para quem não deseja perder o foco do treino. Com ele é possível treinar a qualquer hora e em qualquer lugar, acessando as aulas preparadas por profissionais disponíveis ou seguindo as dicas de treino preparadas especialmente para o seu objetivo.',
+        background: abouts[0].background.url,
+        text: abouts[0].text,
       },
       planSection: {
-        plans: plansMock,
-        tryText: 'Experimente Grátis por 7 dias',
+        plans: planSections[0].plans.map((plan) => ({
+          planType: plan.plan,
+          price: plan.price,
+          image: plan.image.url,
+          buttonText: plan.buttonText,
+          tryText: planSections[0].tryText,
+          haveOffer: plan?.promotional,
+          equivalentValue: plan?.equivalentValue,
+          offer: plan?.promotionalPrice,
+        })),
       },
       footerSection: {
-        items: socialMock,
-        company: 'Union Group',
-        title: 'Nos acompanhe nas nossas redes',
+        items: footers[0].socials.map((social) => ({
+          name: social.name,
+          urlIcon: social.image.url,
+          urlRedirect: social.link,
+        })),
+        company: footers[0].companyName,
+        title: footers[0].title,
       },
     },
   }
