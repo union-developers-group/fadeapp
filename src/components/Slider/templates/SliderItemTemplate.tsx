@@ -5,10 +5,12 @@ import {
   TestimonialCardProps,
 } from 'components/Cards/TestimonialCard'
 
+import { CarouselTemplateStyle } from '../styles'
+
 export const SliderItemTemplate = (SliderItem: TestimonialCardProps) => {
   const { id, name, message, image } = SliderItem
   return (
-    <SwiperSlide className="inline-block h-full" key={id}>
+    <SwiperSlide className={CarouselTemplateStyle} key={id}>
       <TestimonialCard name={name} message={message} image={image} />
     </SwiperSlide>
   )
