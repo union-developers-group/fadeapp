@@ -1,5 +1,8 @@
-import { Button } from 'components/Buttons/Button'
 import { Headline } from 'components/Headline'
+import { useState } from 'react'
+
+import { Button } from 'components/Buttons/Button'
+import { FormModal } from 'components/Form/FormModal'
 
 import {
   ButtonContainer,
@@ -25,15 +28,25 @@ export const Hero = ({
   tryText,
   image,
 }: HeroProps) => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  function onOpen() {
+    setIsOpen(true)
+  }
+
   return (
     <div className={HeroContainer} style={{ backgroundImage: `url(${image})` }}>
+      <FormModal isOpen={isOpen} setIsOpen={setIsOpen} />
+
       <div className={TitleContainer}>
         <Headline as="h1" title={headlineTitle} />
 
         <p className={Subtitle}>{subtitle}</p>
 
         <div className={ButtonContainer}>
-          <Button className={ButtonStyle}>{textButton}</Button>
+          <Button onClick={onOpen} className={ButtonStyle}>
+            {textButton}
+          </Button>
 
           <p className={Try}>{tryText}</p>
         </div>

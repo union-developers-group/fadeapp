@@ -1,5 +1,5 @@
 export const Container = `
-relative h-full w-[18rem] md:w-[20.75rem] sm:w-full h-[32.125rem] text-white bg-no-repeat bg-contain
+relative h-full w-[18rem] md:w-[20.75rem] sm:w-full h-[32.125rem] text-white bg-no-repeat bg-contain lg:hover:-translate-y-6 lg:duration-300 lg:transition-all lg:ease-in-out
 `
 export const OfferStyle = `
 absolute right-6 h-[5.62rem] w-[4rem] items-center bg-primary py-6 text-center text-4xl font-bold text-secondary rounded-xl rounded-t-none

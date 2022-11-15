@@ -1,9 +1,8 @@
-import { useState } from 'react'
 import { Icon } from '@iconify/react'
 import { Dialog } from '@headlessui/react'
 
-import { Input } from 'components/Form/Input'
 import { Button } from 'components/Buttons/Button'
+import { Input } from '../Input'
 
 import {
   FormModalContainer,
@@ -17,9 +16,12 @@ import {
   FormModalSubmitButton,
 } from './styles'
 
-export const FormModal = () => {
-  const [isOpen, setIsOpen] = useState(true)
+export interface FormModalProps {
+  isOpen?: boolean
+  setIsOpen: (isOpen: boolean) => void
+}
 
+export const FormModal = ({ isOpen, setIsOpen }: FormModalProps) => {
   function onClose() {
     setIsOpen(false)
   }

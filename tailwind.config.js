@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   mode: 'jit',
   content: [
@@ -6,6 +8,10 @@ module.exports = {
     './src/layout/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    screens: {
+      xs: '400px',
+      ...defaultTheme.screens,
+    },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
       sm: ['0.875rem', { lineHeight: '1.25rem' }],
@@ -53,6 +59,14 @@ module.exports = {
         10: '10px',
       },
       keyframes: {
+        'fade-in': {
+          '0%': {
+            opacity: '0',
+          },
+          '100%': {
+            opacity: '1',
+          },
+        },
         'fade-in-down': {
           '0%': {
             opacity: '0',
@@ -65,6 +79,7 @@ module.exports = {
         },
       },
       animation: {
+        'fade-in': 'fade-in 0.3s ease-out',
         'fade-in-down': 'fade-in-down 0.3s ease-out',
       },
     },

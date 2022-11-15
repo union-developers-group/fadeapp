@@ -9,11 +9,22 @@ import { testimonialUsersMock } from 'components/Cards/TestimonialCard/mock'
 import { socialMock } from 'components/Buttons/ButtonSocial/mock'
 import { plansMock } from 'components/Cards/PlanCard/mock'
 
+import { client } from 'services/client'
+
+import { GET_MAIN } from 'graphql/queries'
+import { GetMainQuery } from 'graphql/generated/graphql'
+
 export default function Main(props: MainLayoutProps) {
   return <MainLayout {...props} />
 }
 
 export const getStaticProps: GetStaticProps = async () => {
+  const { data } = await client.query<GetMainQuery>({
+    query: GET_MAIN,
+  })
+
+  console.log(data)
+
   return {
     props: {
       menu: menuMock,
