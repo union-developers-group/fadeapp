@@ -1,5 +1,4 @@
-import { GetMainQuery } from "graphql/generated/graphql"
-import { menuMapper } from "."
+import { menuMapper, MenuProps } from "."
 
 const menu = [
   {
@@ -18,7 +17,7 @@ const menu = [
     name: 'Planos',
     link: 'plans',
   },
-] as GetMainQuery["menus"]
+] as MenuProps[]
 
 describe('menuMapper', () => {
   it('should return the right format when mapped', () => {
