@@ -5,7 +5,6 @@ import { Highlight, HighlightItemProps } from 'components/Highlight'
 import { Headline } from 'components/Headline'
 import { Slider } from 'components/Slider'
 import { PlanCardProps } from 'components/Cards/PlanCard'
-import { Footer } from 'components/Shared/Footer'
 import { MenuProps } from 'components/Shared/Header/templates/menuTemplate'
 import { TestimonialCardProps } from 'components/Cards/TestimonialCard'
 import { ButtonSocialProps } from 'components/Buttons/ButtonSocial'
@@ -18,7 +17,6 @@ import {
   AboutTextStyle,
   LineContainer,
   LineStyle,
-  MainContainer,
   OrText,
   PlansContainer,
   PlanSectionStyles,
@@ -29,6 +27,7 @@ import {
   TryStyles,
   bgFinalSection,
 } from './styles'
+import Base from 'layout/Base'
 
 interface AboutSection {
   text: string
@@ -66,75 +65,71 @@ export const MainLayout = ({
   footerSection,
 }: MainLayoutProps) => {
   return (
-    <main className={MainContainer}>
-      <Header menu={menu} />
+    <>
+      <Base menu={menu} footerSection={footerSection}>
+        <Header menu={menu} />
 
-      <Hero
-        subtitle={hero.subtitle}
-        headlineTitle={hero.headlineTitle}
-        image={hero.image}
-        textButton={hero.textButton}
-        tryText={hero.tryText}
-      />
+        <Hero
+          subtitle={hero.subtitle}
+          headlineTitle={hero.headlineTitle}
+          image={hero.image}
+          textButton={hero.textButton}
+          tryText={hero.tryText}
+        />
 
-      <ChatbootButton />
+        <ChatbootButton />
 
-      <section id="services" className={ServicesContainer}>
-        <Highlight items={highlights} />
-      </section>
+        <section id="services" className={ServicesContainer}>
+          <Highlight items={highlights} />
+        </section>
 
-      <section
-        id="about"
-        style={{
-          background: `linear-gradient(103.85deg, rgba(0, 0, 0, 0.3822) 15.02%, rgba(0, 0, 0, 0.637) 87.81%), url(${aboutSection.background})`,
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: '100% 100%',
-        }}
-        className={AboutContainer}
-      >
-        <Headline withLine lineSize="large" title="Sobre" />
+        <section
+          id="about"
+          style={{
+            background: `linear-gradient(103.85deg, rgba(0, 0, 0, 0.3822) 15.02%, rgba(0, 0, 0, 0.637) 87.81%), url(${aboutSection.background})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: '100% 100%',
+          }}
+          className={AboutContainer}
+        >
+          <Headline withLine lineSize="large" title="Sobre" />
 
-        <div className={AboutTextStyle}>
-          <p>{aboutSection.text}</p>
-        </div>
-      </section>
+          <div className={AboutTextStyle}>
+            <p>{aboutSection.text}</p>
+          </div>
+        </section>
 
-      <div className={bgFinalSection}>
-        <div id="testimonials" className={TestimonialsContainer}>
-          <section className={TestimonialStyles}>
-            <Headline
-              title="Quem usa recomenda"
-              withLine
-              lineSize="large"
-              position="center"
-            />
-            <Slider data={testimonials} />
-          </section>
+        <div className={bgFinalSection}>
+          <div id="testimonials" className={TestimonialsContainer}>
+            <section className={TestimonialStyles}>
+              <Headline
+                title="Quem usa recomenda"
+                withLine
+                lineSize="large"
+                position="center"
+              />
+              <Slider data={testimonials} />
+            </section>
 
-          <section id="plans" className={PlansContainer}>
-            <div className={PlansSection}>
-              <Headline title="Escolha o melhor plano para você" />
-              <p className={TryStyles}>{planSection.tryText}</p>
+            <section id="plans" className={PlansContainer}>
+              <div className={PlansSection}>
+                <Headline title="Escolha o melhor plano para você" />
+                <p className={TryStyles}>{planSection.tryText}</p>
 
-              <div className={LineContainer}>
-                <div className={LineStyle}></div>
-                <span className={OrText}>ou</span>
-                <div className={LineStyle}></div>
+                <div className={LineContainer}>
+                  <div className={LineStyle}></div>
+                  <span className={OrText}>ou</span>
+                  <div className={LineStyle}></div>
+                </div>
               </div>
-            </div>
 
-            <div className={PlanSectionStyles}>
-              {planSection.plans.map(PlanCardTemplate)}
-            </div>
-          </section>
-
-          <Footer
-            items={footerSection.items}
-            company={footerSection.company}
-            title={footerSection.title}
-          />
+              <div className={PlanSectionStyles}>
+                {planSection.plans.map(PlanCardTemplate)}
+              </div>
+            </section>
+          </div>
         </div>
-      </div>
-    </main>
+      </Base>
+    </>
   )
 }

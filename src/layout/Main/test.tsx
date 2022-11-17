@@ -84,7 +84,6 @@ describe('<Main />', () => {
   it('should render main page', () => {
     const { container } = render(<MainLayout {...data} />)
 
-    const header = getByTestId('Mock Header')
     const chatbootButton = getByTestId('Mock ChatbootButton')
     const hero = getByTestId('Mock Hero')
     const highlight = getByTestId('Mock Highlight')
@@ -101,9 +100,9 @@ describe('<Main />', () => {
     const plansTryText = getByText('Experimente Grátis por 7 dias')
     const plansLineText = getByText('ou')
     const planCards = getAllByTestId('Mock PlanCard')
-    const footer = getByTestId('Mock Footer')
 
-    expect(header).toBeInTheDocument()
+
+  
     expect(chatbootButton).toBeInTheDocument()
     expect(hero).toBeInTheDocument()
     expect(highlight).toBeInTheDocument()
@@ -117,7 +116,6 @@ describe('<Main />', () => {
     expect(plansTitle).toBeInTheDocument()
     expect(plansTryText).toBeInTheDocument()
     expect(plansLineText).toBeInTheDocument()
-    expect(planCards).toHaveLength(data.planSection.plans.length)
-    expect(footer).toBeInTheDocument()
+    expect(planCards).toHaveLength(data.planSection.plans.length)   
   })
 })

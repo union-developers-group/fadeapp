@@ -3,6 +3,9 @@ flex
 flex-col
 justify-start
 items-center
+bg-final-section
+bg-no-repeat
+bg-cover
 `
 export const FooterTitle = `
 mb-8
