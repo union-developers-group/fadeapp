@@ -2,8 +2,9 @@ import {
   Asset,
   Hero as HeroGraphCMS,
   Highlight as HighlightGraphCMS,
-  TestimonialCard as TestimonialCardGraphCMS,
   About as AboutGraphCMS,
+  TestimonialCard as TestimonialCardGraphCMS,
+  PlanCard as PlanCardGraphCMS,
   Social as SocialGraphCMS,
   Footer as FooterGraphCMS,
 } from "graphql/generated/graphql"
@@ -24,13 +25,22 @@ type Highlight = Pick<HighlightGraphCMS, 'id' | 'title' | 'text' >
 
 export interface HighlightProps extends Highlight, Image {}
 
+type About = Pick<AboutGraphCMS, 'text' >
+
+export interface AboutProps extends About, Background {}
+
 type TestimonialCard = Pick<TestimonialCardGraphCMS, 'id' | 'name' | 'message' >
 
 export interface TestimonialCardProps extends TestimonialCard, Image {}
 
-type About = Pick<AboutGraphCMS, 'text' >
+type PlanCard = Pick<PlanCardGraphCMS, 'plan' | 'price' | 'buttonText' | 'promotional' | 'equivalentValue' | 'promotionalPrice'>
 
-export interface AboutProps extends About, Background {}
+interface PlanCardProps extends Image, PlanCard {}
+
+export interface PlanSectionProps {
+  tryText: string
+  plans: PlanCardProps[] 
+}
 
 type Social = Pick<SocialGraphCMS, 'name' | 'link'>
 
