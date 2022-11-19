@@ -12,6 +12,7 @@ import { heroMapper } from 'mappers/hero'
 import { highlightsMapper } from 'mappers/highlights'
 import { testimonialsMapper } from 'mappers/testimonials'
 import { aboutMapper } from 'mappers/aboutSection'
+import { footerMapper } from 'mappers/footer'
 
 export default function Main(props: MainLayoutProps) {
   return <MainLayout {...props} />
@@ -51,15 +52,7 @@ export const getStaticProps: GetStaticProps = async () => {
           offer: plan?.promotionalPrice,
         })),
       },
-      footerSection: {
-        items: footers[0].socials.map((social) => ({
-          name: social.name,
-          urlIcon: social.image.url,
-          urlRedirect: social.link,
-        })),
-        company: footers[0].companyName,
-        title: footers[0].title,
-      },
+      footerSection: footerMapper(footers),
     },
   }
 }
