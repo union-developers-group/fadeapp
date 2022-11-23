@@ -10,8 +10,9 @@ import { GetMainQuery } from 'graphql/generated/graphql'
 import { menuMapper } from 'mappers/menu'
 import { heroMapper } from 'mappers/hero'
 import { highlightsMapper } from 'mappers/highlights'
-import { testimonialsMapper } from 'mappers/testimonials'
 import { aboutMapper } from 'mappers/aboutSection'
+import { testimonialsMapper } from 'mappers/testimonials'
+import { planSectionMapper } from 'mappers/planSection'
 import { footerMapper } from 'mappers/footer'
 
 export default function Main(props: MainLayoutProps) {
@@ -24,8 +25,8 @@ export const getStaticProps: GetStaticProps = async () => {
       menus,
       heroes,
       highlights,
-      testimonialCards,
       abouts,
+      testimonialCards,
       planSections,
       footers,
     },
@@ -38,20 +39,9 @@ export const getStaticProps: GetStaticProps = async () => {
       menu: menuMapper(menus),
       hero: heroMapper(heroes),
       highlights: highlightsMapper(highlights),
-      testimonials: testimonialsMapper(testimonialCards),
       aboutSection: aboutMapper(abouts),
-      planSection: {
-        plans: planSections[0].plans.map((plan) => ({
-          planType: plan.plan,
-          price: plan.price,
-          image: plan.image.url,
-          buttonText: plan.buttonText,
-          tryText: planSections[0].tryText,
-          haveOffer: plan?.promotional,
-          equivalentValue: plan?.equivalentValue,
-          offer: plan?.promotionalPrice,
-        })),
-      },
+      testimonials: testimonialsMapper(testimonialCards),
+      planSection: planSectionMapper(planSections),
       footerSection: footerMapper(footers),
     },
   }
