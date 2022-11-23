@@ -4,6 +4,8 @@ import {
   Highlight as HighlightGraphCMS,
   TestimonialCard as TestimonialCardGraphCMS,
   About as AboutGraphCMS,
+  Social as SocialGraphCMS,
+  Footer as FooterGraphCMS,
 } from "graphql/generated/graphql"
 
 type Background = {
@@ -29,3 +31,13 @@ export interface TestimonialCardProps extends TestimonialCard, Image {}
 type About = Pick<AboutGraphCMS, 'text' >
 
 export interface AboutProps extends About, Background {}
+
+type Social = Pick<SocialGraphCMS, 'name' | 'link'>
+
+interface SocialProps extends Social, Image {}
+
+type Footer = Pick<FooterGraphCMS, 'companyName' | 'title' >
+
+export interface FooterProps extends Footer {
+  socials : SocialProps[]
+}
