@@ -8,7 +8,7 @@ export const AboutSection = `my-0 mx-auto flex flex-col items-center justify-cen
 
 export const AboutContainer = `relative h-[20.68rem] w-full flex-col items-center justify-center bg-cover bg-center bg-no-repeat p-[1rem] md:h-[40.75rem] md:items-start md:bg-[length:100%_100%] md:p-[9.375rem]`
 
-export const AboutTextStyle = `w-[21.43] py-[1.5rem] text-base text-gray-300 before:absolute before:bottom-[-3px] before:h-[0.25rem] before:w-[80%] before:bg-primary md:w-[34.5rem] lg:text-lg`
+export const AboutTextStyle = `w-[21.43] py-[1.5rem] text-base text-gray-300 before:absolute  md:w-[34.5rem] lg:text-lg`
 
 export const TestimonialsContainer = `w-full items-center justify-center py-[2.5rem] text-center md:py-[7.12rem] bg-cover bg-no-repeat`
 

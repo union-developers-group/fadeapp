@@ -5,6 +5,7 @@ import type { AppProps } from 'next/app'
 import { ApolloProvider } from '@apollo/client'
 
 import { client } from 'services/client'
+import { motion } from 'framer-motion'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -30,7 +31,20 @@ function MyApp({ Component, pageProps }: AppProps) {
           href="/favicon-16x16.png"
         />
       </Head>
-      <Component {...pageProps} />
+      <motion.div
+        initial="initial"
+        animate="animate"
+        variants={{
+          initial: {
+            opacity: 0,
+          },
+          animate: {
+            opacity: 1,
+          },
+        }}
+      >
+        <Component {...pageProps} />
+      </motion.div>
     </ApolloProvider>
   )
 }
