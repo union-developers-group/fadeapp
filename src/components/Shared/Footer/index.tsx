@@ -2,6 +2,8 @@ import { ButtonSocialProps } from 'components/Buttons/ButtonSocial'
 
 import { ButtonSocialTemplate } from './templates/ButtonSocialTemplate'
 
+import { analyticsEvent } from 'services/googleAnalytics'
+
 import {
   FooterCompanyName,
   FooterContainer,
@@ -21,6 +23,10 @@ export const Footer = ({ title, items, company, linkCompany }: FooterProps) => {
   const currentDate = new Date()
   const currentYear = currentDate.getFullYear()
 
+  function handleRegisterCompanyLink() {
+    analyticsEvent('click', 'links', 'Union Link')
+  }
+
   return (
     <footer className={FooterContainer}>
       <h2 className={FooterTitle}>{title}</h2>
@@ -34,6 +40,7 @@ export const Footer = ({ title, items, company, linkCompany }: FooterProps) => {
           href={linkCompany}
           target="_blank"
           rel="noreferrer"
+          onClick={handleRegisterCompanyLink}
         >
           {company}
         </a>{' '}

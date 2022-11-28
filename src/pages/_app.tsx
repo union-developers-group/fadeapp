@@ -1,15 +1,36 @@
 import 'styles/globals.css'
 
 import Head from 'next/head'
+
 import type { AppProps } from 'next/app'
 import { ApolloProvider } from '@apollo/client'
+
 import { DefaultSeo, NextSeo } from 'next-seo'
-import { SEO } from '../../next-seo.config.js'
+
+import { motion } from 'framer-motion'
+import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 
 import { client } from 'services/client'
-import { motion } from 'framer-motion'
+import { pageview } from 'services/googleAnalytics'
+
+import { Analytics } from 'components/Analytics'
+
+import { SEO } from '../../next-seo.config.js'
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter()
+
+  const url = router.pathname
+
+  useEffect(() => {
+    function onLoadPageView(url: string) {
+      pageview(url)
+    }
+
+    onLoadPageView(url)
+  }, [url])
+
   return (
     <ApolloProvider client={client}>
       <Head>
@@ -47,6 +68,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       >
         <DefaultSeo {...SEO} />
         <Component {...pageProps} />
+        <Analytics />
       </motion.div>
     </ApolloProvider>
   )

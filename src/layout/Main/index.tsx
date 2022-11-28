@@ -120,7 +120,6 @@ export const MainLayout = ({
             >
               <Headline withLine lineSize="large" title="Sobre" />
             </motion.div>
-
             <motion.div
               initial="hidden"
               whileInView="visible"
