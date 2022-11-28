@@ -60,6 +60,7 @@ export const GET_MAIN = gql`
         }
       }
       companyName
+      linkCompany
       title
     }
   }

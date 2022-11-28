@@ -9,5 +9,6 @@ export const footerMapper = (footers: FooterProps[]) => {
     })),
     company: footers[0].companyName,
     title: footers[0].title,
+    linkCompany: footers[0].linkCompany,
     })
 }

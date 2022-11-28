@@ -28,6 +28,7 @@ const footer = [
     ],
     title: 'Title 1',
     companyName:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.',
+    linkCompany: 'https://company.com/',
   },
 ] as FooterProps[]
 
@@ -53,6 +54,7 @@ describe('footerMapper', () => {
       ],
       title: 'Title 1',
       company:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.',
+      linkCompany: 'https://company.com/',
     })
   })
 })

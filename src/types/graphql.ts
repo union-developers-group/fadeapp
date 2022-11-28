@@ -46,7 +46,7 @@ type Social = Pick<SocialGraphCMS, 'name' | 'link'>
 
 interface SocialProps extends Social, Image {}
 
-type Footer = Pick<FooterGraphCMS, 'companyName' | 'title' >
+type Footer = Pick<FooterGraphCMS, 'companyName' | 'linkCompany' | 'title' >
 
 export interface FooterProps extends Footer {
   socials : SocialProps[]

@@ -1358,6 +1358,7 @@ export type Footer = Node & {
   history: Array<Version>;
   /** The unique identifier */
   id: Scalars['ID'];
+  linkCompany?: Maybe<Scalars['String']>;
   /** The time the document was published. Null on documents in draft stage. */
   publishedAt?: Maybe<Scalars['DateTime']>;
   /** User that last published this document */
@@ -1445,6 +1446,7 @@ export type FooterConnection = {
 export type FooterCreateInput = {
   companyName: Scalars['String'];
   createdAt?: InputMaybe<Scalars['DateTime']>;
+  linkCompany?: InputMaybe<Scalars['String']>;
   socials?: InputMaybe<SocialCreateManyInlineInput>;
   title: Scalars['String'];
   updatedAt?: InputMaybe<Scalars['DateTime']>;
@@ -1540,6 +1542,25 @@ export type FooterManyWhereInput = {
   id_not_starts_with?: InputMaybe<Scalars['ID']>;
   /** All values starting with the given string. */
   id_starts_with?: InputMaybe<Scalars['ID']>;
+  linkCompany?: InputMaybe<Scalars['String']>;
+  /** All values containing the given string. */
+  linkCompany_contains?: InputMaybe<Scalars['String']>;
+  /** All values ending with the given string. */
+  linkCompany_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are contained in given list. */
+  linkCompany_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  /** All values that are not equal to given value. */
+  linkCompany_not?: InputMaybe<Scalars['String']>;
+  /** All values not containing the given string. */
+  linkCompany_not_contains?: InputMaybe<Scalars['String']>;
+  /** All values not ending with the given string */
+  linkCompany_not_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are not contained in given list. */
+  linkCompany_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  /** All values not starting with the given string. */
+  linkCompany_not_starts_with?: InputMaybe<Scalars['String']>;
+  /** All values starting with the given string. */
+  linkCompany_starts_with?: InputMaybe<Scalars['String']>;
   publishedAt?: InputMaybe<Scalars['DateTime']>;
   /** All values greater than the given value. */
   publishedAt_gt?: InputMaybe<Scalars['DateTime']>;
@@ -1606,6 +1627,8 @@ export enum FooterOrderByInput {
   CreatedAtDesc = 'createdAt_DESC',
   IdAsc = 'id_ASC',
   IdDesc = 'id_DESC',
+  LinkCompanyAsc = 'linkCompany_ASC',
+  LinkCompanyDesc = 'linkCompany_DESC',
   PublishedAtAsc = 'publishedAt_ASC',
   PublishedAtDesc = 'publishedAt_DESC',
   TitleAsc = 'title_ASC',
@@ -1616,6 +1639,7 @@ export enum FooterOrderByInput {
 
 export type FooterUpdateInput = {
   companyName?: InputMaybe<Scalars['String']>;
+  linkCompany?: InputMaybe<Scalars['String']>;
   socials?: InputMaybe<SocialUpdateManyInlineInput>;
   title?: InputMaybe<Scalars['String']>;
 };
@@ -1639,6 +1663,7 @@ export type FooterUpdateManyInlineInput = {
 
 export type FooterUpdateManyInput = {
   companyName?: InputMaybe<Scalars['String']>;
+  linkCompany?: InputMaybe<Scalars['String']>;
   title?: InputMaybe<Scalars['String']>;
 };
 
@@ -1758,6 +1783,25 @@ export type FooterWhereInput = {
   id_not_starts_with?: InputMaybe<Scalars['ID']>;
   /** All values starting with the given string. */
   id_starts_with?: InputMaybe<Scalars['ID']>;
+  linkCompany?: InputMaybe<Scalars['String']>;
+  /** All values containing the given string. */
+  linkCompany_contains?: InputMaybe<Scalars['String']>;
+  /** All values ending with the given string. */
+  linkCompany_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are contained in given list. */
+  linkCompany_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  /** All values that are not equal to given value. */
+  linkCompany_not?: InputMaybe<Scalars['String']>;
+  /** All values not containing the given string. */
+  linkCompany_not_contains?: InputMaybe<Scalars['String']>;
+  /** All values not ending with the given string */
+  linkCompany_not_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are not contained in given list. */
+  linkCompany_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  /** All values not starting with the given string. */
+  linkCompany_not_starts_with?: InputMaybe<Scalars['String']>;
+  /** All values starting with the given string. */
+  linkCompany_starts_with?: InputMaybe<Scalars['String']>;
   publishedAt?: InputMaybe<Scalars['DateTime']>;
   /** All values greater than the given value. */
   publishedAt_gt?: InputMaybe<Scalars['DateTime']>;
@@ -9223,7 +9267,7 @@ export enum _SystemDateTimeFieldVariation {
 export type GetMainQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetMainQuery = { __typename?: 'Query', menus: Array<{ __typename?: 'Menu', name: string, link: string }>, heroes: Array<{ __typename?: 'Hero', title: string, subtitle: string, textButton: string, tryText: string, image: { __typename?: 'Asset', url: string } }>, highlights: Array<{ __typename?: 'Highlight', id: string, title: string, text: string, image: { __typename?: 'Asset', url: string } }>, testimonialCards: Array<{ __typename?: 'TestimonialCard', id: string, name: string, message: string, image: { __typename?: 'Asset', url: string } }>, abouts: Array<{ __typename?: 'About', text: string, background: { __typename?: 'Asset', url: string } }>, planSections: Array<{ __typename?: 'PlanSection', tryText: string, plans: Array<{ __typename?: 'PlanCard', plan: PlanType, price: number, promotional?: boolean | null, equivalentValue?: number | null, promotionalPrice?: number | null, buttonText: string, image: { __typename?: 'Asset', url: string } }> }>, footers: Array<{ __typename?: 'Footer', companyName: string, title: string, socials: Array<{ __typename?: 'Social', name: string, link: string, image: { __typename?: 'Asset', url: string } }> }> };
+export type GetMainQuery = { __typename?: 'Query', menus: Array<{ __typename?: 'Menu', name: string, link: string }>, heroes: Array<{ __typename?: 'Hero', title: string, subtitle: string, textButton: string, tryText: string, image: { __typename?: 'Asset', url: string } }>, highlights: Array<{ __typename?: 'Highlight', id: string, title: string, text: string, image: { __typename?: 'Asset', url: string } }>, testimonialCards: Array<{ __typename?: 'TestimonialCard', id: string, name: string, message: string, image: { __typename?: 'Asset', url: string } }>, abouts: Array<{ __typename?: 'About', text: string, background: { __typename?: 'Asset', url: string } }>, planSections: Array<{ __typename?: 'PlanSection', tryText: string, plans: Array<{ __typename?: 'PlanCard', plan: PlanType, price: number, promotional?: boolean | null, equivalentValue?: number | null, promotionalPrice?: number | null, buttonText: string, image: { __typename?: 'Asset', url: string } }> }>, footers: Array<{ __typename?: 'Footer', companyName: string, linkCompany?: string | null, title: string, socials: Array<{ __typename?: 'Social', name: string, link: string, image: { __typename?: 'Asset', url: string } }> }> };
 
 
 export const GetMainDocument = gql`
@@ -9286,6 +9330,7 @@ export const GetMainDocument = gql`
       }
     }
     companyName
+    linkCompany
     title
   }
 }

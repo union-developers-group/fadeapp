@@ -22,3 +22,6 @@ text-xs
 text-gray-700
 font-normal
 `
+export const FooterCompanyName = `
+hover:text-primary
+`
