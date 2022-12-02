@@ -16,6 +16,7 @@ flex-col
 lg:flex-row
 lg:odd:flex-row-reverse
 
+
 after:content-[""] 
 after:max-w-[55%]
 after:absolute 

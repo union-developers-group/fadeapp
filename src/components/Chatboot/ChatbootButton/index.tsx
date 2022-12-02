@@ -9,6 +9,7 @@ import {
   ChatbootLabelStyle,
 } from './styles'
 
+
 export const ChatbootButton = () => {
   const [isOpenModal, setIsOpenModal] = useState(false)
 
@@ -17,7 +18,7 @@ export const ChatbootButton = () => {
   }
 
   return (
-    <div>
+    <>
       <button className={ChatbootButtonStyle} onClick={handleOpenModal}>
         <span className={ChatbootLabelStyle}>Chat</span>
         <Icon
@@ -28,6 +29,6 @@ export const ChatbootButton = () => {
       </button>
 
       {isOpenModal && <ChatbootModal />}
-    </div>
+    </>
   )
 }

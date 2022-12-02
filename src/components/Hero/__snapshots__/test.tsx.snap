@@ -17,45 +17,61 @@ flex w-full max-w-[27.75rem] flex-col items-center text-center md:text-left just
 "
     >
       <div
-        class="
+        style="opacity: 0; transform: scale(0.5) translateZ(0);"
+      >
+        <div
+          class="
 relative flex flex-col text-white  
   md:min-w-[25.25rem] 
 items-start"
-      >
-        <h1
-          class="
+        >
+          <h1
+            class="
   text-4xl font-bold lg:text-7xl 
 } "
-        >
-          Construa seu shape sem atrapalhar a sua rotina
-        </h1>
+          >
+            Construa seu shape sem atrapalhar a sua rotina
+          </h1>
+        </div>
       </div>
-      <p
-        class="
+      <div
+        style="opacity: 0; transform: scale(0.5) translateZ(0);"
+      >
+        <p
+          class="
 mb-5 md:w-[26rem] w-[20rem] mt-3 text-center md:text-xxl text-xl font-normal text-gray-300 md:text-left
 "
-      >
-        Seu treino personalizado, na palma da sua mão, a qualquer hora e lugar.
-      </p>
+        >
+          Seu treino personalizado, na palma da sua mão, a qualquer hora e lugar.
+        </p>
+      </div>
       <div
         class="
  flex flex-col last:items-center max-w-[18.31rem] md:w-[21.25rem]
 "
       >
-        <button
-          class="flex items-center justify-center rounded-10 bg-primary font-bold text-secondary transition hover:text-primary hover:bg-transparent border-2 border-primary transition-color py-4 w-[21.5rem] text-lg h-[3.625rem] 
+        <div
+          style="opacity: 0; transform: scale(0.5) translateZ(0);"
+        >
+          <button
+            class="flex items-center justify-center rounded-10 bg-primary font-bold text-secondary transition hover:text-primary hover:bg-transparent border-2 border-primary transition-color py-4 w-[21.5rem] text-lg h-[3.625rem] 
 max-w-[18.31rem] md:w-[21.25rem]
 "
+          >
+            EU QUERO
+          </button>
+        </div>
+        <div
+          style="opacity: 0; transform: scale(0.5) translateZ(0);"
         >
-          EU QUERO
-        </button>
-        <p
-          class="
+          <p
+            class="
 mt-2 text-sm text-gray-500
 "
-        >
-          Experimente 7 dias Grátis
-        </p>
+          >
+            Experimente 7 dias Grátis
+          </p>
+        </div>
       </div>
     </div>
   </div>

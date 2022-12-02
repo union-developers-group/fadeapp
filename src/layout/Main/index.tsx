@@ -1,3 +1,6 @@
+import { useEffect, useRef } from 'react'
+import { motion, useAnimation, useInView } from 'framer-motion'
+
 import { Header } from 'components/Shared/Header'
 import { Hero, HeroProps } from 'components/Hero'
 import { ChatbootButton } from 'components/Chatboot/ChatbootButton'
@@ -66,6 +69,16 @@ export const MainLayout = ({
   planSection,
   footerSection,
 }: MainLayoutProps) => {
+  const control = useAnimation()
+  const ref = useRef(null)
+  const isInView = useInView(ref)
+
+  useEffect(() => {
+    if (isInView) {
+      control.start('visible')
+    }
+  }, [control, isInView])
+
   return (
     <main className={MainContainer}>
       <Header menu={menu} />
@@ -85,6 +98,7 @@ export const MainLayout = ({
       </section>
 
       <section
+        ref={ref}
         id="about"
         style={{
           background: `linear-gradient(103.85deg, rgba(0, 0, 0, 0.3822) 15.02%, rgba(0, 0, 0, 0.637) 87.81%), url(${aboutSection.background})`,
@@ -93,28 +107,88 @@ export const MainLayout = ({
         }}
         className={AboutContainer}
       >
-        <Headline withLine lineSize="large" title="Sobre" />
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          variants={{
+            visible: { opacity: 1, scale: 1 },
+            hidden: { opacity: 0, scale: 0 },
+          }}
+        >
+          <Headline withLine lineSize="large" title="Sobre" />
+        </motion.div>
 
-        <div className={AboutTextStyle}>
-          <p>{aboutSection.text}</p>
+        <div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            variants={{
+              visible: {
+                opacity: 1,
+                scale: 1,
+                breakBefore: 'all',
+              },
+              hidden: { opacity: 0, scale: 0, breakBefore: 'inherit' },
+            }}
+            className={AboutTextStyle}
+          >
+            <p>{aboutSection.text}</p>
+          </motion.div>
         </div>
+        <div className="absolute bottom-[-3px] h-[0.25rem] w-[80%] bg-primary"></div>
       </section>
 
       <div className={bgFinalSection}>
         <div id="testimonials" className={TestimonialsContainer}>
           <section className={TestimonialStyles}>
-            <Headline
-              title="Quem usa recomenda"
-              withLine
-              lineSize="large"
-              position="center"
-            />
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={{
+                visible: { opacity: 1, scale: 1 },
+                hidden: { opacity: 0, scale: 0 },
+              }}
+              transition={{
+                duration: 0.9,
+                delay: 0.4,
+                ease: [0, 0.71, 0.2, 1.01],
+              }}
+            >
+              <Headline
+                title="Quem usa recomenda"
+                withLine
+                lineSize="large"
+                position="center"
+              />
+            </motion.div>
+
             <Slider data={testimonials} />
           </section>
 
           <section id="plans" className={PlansContainer}>
             <div className={PlansSection}>
-              <Headline title="Escolha o melhor plano para você" />
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={{
+                  visible: { opacity: 1, scale: 1 },
+                  hidden: { opacity: 0, scale: 0 },
+                }}
+                transition={{
+                  duration: 0.6,
+                  delay: 0.2,
+                  ease: [0, 0.71, 0.2, 1.01],
+                }}
+              >
+                <Headline title="Escolha o melhor plano para você" />
+              </motion.div>
+
               <p className={TryStyles}>{planSection.tryText}</p>
 
               <div className={LineContainer}>
