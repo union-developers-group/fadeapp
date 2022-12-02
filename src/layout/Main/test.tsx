@@ -28,6 +28,7 @@ const data: MainLayoutProps = {
     items: socialMock,
     company: 'Union Group',
     title: 'Nos acompanhe nas nossas redes',
+    linkCompany: 'https://www.company.com',
   },
 }
 

@@ -37,6 +37,7 @@ interface AboutSection {
 
 interface FooterSection {
   items: ButtonSocialProps[]
+  linkCompany: string
   company: string
   title: string
 }
@@ -131,6 +132,7 @@ export const MainLayout = ({
           <Footer
             items={footerSection.items}
             company={footerSection.company}
+            linkCompany={footerSection.linkCompany}
             title={footerSection.title}
           />
         </div>
