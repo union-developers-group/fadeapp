@@ -143,8 +143,8 @@ export const MainLayout = ({
       </section>
 
       <div className={bgFinalSection}>
-        <div id="testimonials" className={TestimonialsContainer}>
-          <section className={TestimonialStyles}>
+        <div className={TestimonialsContainer}>
+          <section id="testimonials" className={TestimonialStyles}>
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -166,7 +166,6 @@ export const MainLayout = ({
                 position="center"
               />
             </motion.div>
-
             <Slider data={testimonials} />
           </section>
 

@@ -220,7 +220,7 @@ exports[`<Header /> should match snapshot 1`] = `
           class="hover:text-primary hover:transition-all"
         >
           <a
-            class=""
+            class="text-white"
             href="/#services"
           >
             Serviços
@@ -230,7 +230,7 @@ exports[`<Header /> should match snapshot 1`] = `
           class="hover:text-primary hover:transition-all"
         >
           <a
-            class=""
+            class="text-white"
             href="/#about"
           >
             Sobre
@@ -240,7 +240,7 @@ exports[`<Header /> should match snapshot 1`] = `
           class="hover:text-primary hover:transition-all"
         >
           <a
-            class=""
+            class="text-white"
             href="/#testimonials"
           >
             Depoimentos
@@ -250,7 +250,7 @@ exports[`<Header /> should match snapshot 1`] = `
           class="hover:text-primary hover:transition-all"
         >
           <a
-            class=""
+            class="text-white"
             href="/#plans"
           >
             Planos

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Icon } from '@iconify/react'
 import { Menu, Transition } from '@headlessui/react'
+import Scrollspy from 'react-scrollspy'
 
 import { Logo } from 'components/Shared/Logo'
 
@@ -62,7 +63,14 @@ export const Header = ({ menu }: HeaderMenuProps) => {
           <Logo />
         </div>
 
-        <ul className={navBarUlStyle}>{menu.map(DesktopMenuTemplate)}</ul>
+        <Scrollspy
+          items={['services', 'about', 'testimonials', 'plans']}
+          currentClassName="text-primary"
+          className={navBarUlStyle}
+          offset={-200}
+        >
+          {menu.map(DesktopMenuTemplate)}
+        </Scrollspy>
 
         <Menu>
           {({ open }) => (
@@ -70,6 +78,7 @@ export const Header = ({ menu }: HeaderMenuProps) => {
               <Menu.Button className={navBarMenuMobuleButtonStyle}>
                 <Icon className={navBarMenuMobuleIconStyle} icon="bx:menu" />
               </Menu.Button>
+
               <Transition
                 show={open}
                 enter="transition duration-300 ease-out"
