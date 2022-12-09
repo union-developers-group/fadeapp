@@ -22,7 +22,7 @@ describe('<Header />', () => {
     expect(aboutLink).toBeInTheDocument()
     expect(testimonialsLink).toBeInTheDocument()
     expect(plansLink).toBeInTheDocument()
-    expect(links).toHaveLength(4)
+    expect(links).toHaveLength(5)
   })
 
   it('should render desktop menu', async () => {
