@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+* {
+  scrollbar-width: 22px;
+  scrollbar-color: theme(colors.primary) theme(colors.secondary);
+}
+
+*::-webkit-scrollbar {
+  @apply w-[22px];
+}
+
+*::-webkit-scrollbar-track {
+  @apply bg-secondary;
+}
+
+*::-webkit-scrollbar-thumb {
+  @apply bg-primary rounded-[20px] border-solid border-[6px] border-transparent  bg-clip-content;
+}
