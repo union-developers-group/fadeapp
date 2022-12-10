@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { motion, useAnimation, useInView } from 'framer-motion'
 
-import { Header } from 'components/Shared/Header'
 import { Hero, HeroProps } from 'components/Hero'
 import { ChatbootButton } from 'components/Chatboot/ChatbootButton'
 import { Highlight, HighlightItemProps } from 'components/Highlight'
@@ -32,6 +31,7 @@ import {
   TryStyles,
   bgFinalSection,
 } from './styles'
+import Base from 'layout/Base'
 
 interface AboutSection {
   text: string
@@ -81,96 +81,69 @@ export const MainLayout = ({
 
   return (
     <main className={MainContainer}>
-      <Header menu={menu} />
+      <Base menu={menu}>
+        <Hero
+          subtitle={hero.subtitle}
+          headlineTitle={hero.headlineTitle}
+          image={hero.image}
+          textButton={hero.textButton}
+          tryText={hero.tryText}
+        />
 
-      <Hero
-        subtitle={hero.subtitle}
-        headlineTitle={hero.headlineTitle}
-        image={hero.image}
-        textButton={hero.textButton}
-        tryText={hero.tryText}
-      />
+        <ChatbootButton />
 
-      <ChatbootButton />
+        <section id="services" className={ServicesContainer}>
+          <Highlight items={highlights} />
+        </section>
 
-      <section id="services" className={ServicesContainer}>
-        <Highlight items={highlights} />
-      </section>
-
-      <section
-        ref={ref}
-        id="about"
-        style={{
-          background: `linear-gradient(103.85deg, rgba(0, 0, 0, 0.3822) 15.02%, rgba(0, 0, 0, 0.637) 87.81%), url(${aboutSection.background})`,
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: '100% 100%',
-        }}
-        className={AboutContainer}
-      >
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          variants={{
-            visible: { opacity: 1, scale: 1 },
-            hidden: { opacity: 0, scale: 0 },
+        <section
+          ref={ref}
+          id="about"
+          style={{
+            background: `linear-gradient(103.85deg, rgba(0, 0, 0, 0.3822) 15.02%, rgba(0, 0, 0, 0.637) 87.81%), url(${aboutSection.background})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: '100% 100%',
           }}
+          className={AboutContainer}
         >
-          <Headline withLine lineSize="large" title="Sobre" />
-        </motion.div>
-
-        <div>
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             variants={{
-              visible: {
-                opacity: 1,
-                scale: 1,
-                breakBefore: 'all',
-              },
-              hidden: { opacity: 0, scale: 0, breakBefore: 'inherit' },
+              visible: { opacity: 1, scale: 1 },
+              hidden: { opacity: 0, scale: 0 },
             }}
-            className={AboutTextStyle}
           >
-            <p>{aboutSection.text}</p>
+            <Headline withLine lineSize="large" title="Sobre" />
           </motion.div>
-        </div>
-        <div className="absolute bottom-[-3px] h-[0.25rem] w-[80%] bg-primary"></div>
-      </section>
 
-      <div className={bgFinalSection}>
-        <div className={TestimonialsContainer}>
-          <section id="testimonials" className={TestimonialStyles}>
+          <div>
             <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
               variants={{
-                visible: { opacity: 1, scale: 1 },
-                hidden: { opacity: 0, scale: 0 },
+                visible: {
+                  opacity: 1,
+                  scale: 1,
+                  breakBefore: 'all',
+                },
+                hidden: { opacity: 0, scale: 0, breakBefore: 'inherit' },
               }}
-              transition={{
-                duration: 0.9,
-                delay: 0.4,
-                ease: [0, 0.71, 0.2, 1.01],
-              }}
+              className={AboutTextStyle}
             >
-              <Headline
-                title="Quem usa recomenda"
-                withLine
-                lineSize="large"
-                position="center"
-              />
+              <p>{aboutSection.text}</p>
             </motion.div>
-            <Slider data={testimonials} />
-          </section>
+          </div>
+          <div className="absolute bottom-[-3px] h-[0.25rem] w-[80%] bg-primary"></div>
+        </section>
 
-          <section id="plans" className={PlansContainer}>
-            <div className={PlansSection}>
+        <div className={bgFinalSection}>
+          <div className={TestimonialsContainer}>
+            <section id="testimonials" className={TestimonialStyles}>
               <motion.div
                 initial="hidden"
                 whileInView="visible"
@@ -180,36 +153,63 @@ export const MainLayout = ({
                   hidden: { opacity: 0, scale: 0 },
                 }}
                 transition={{
-                  duration: 0.6,
-                  delay: 0.2,
+                  duration: 0.9,
+                  delay: 0.4,
                   ease: [0, 0.71, 0.2, 1.01],
                 }}
               >
-                <Headline title="Escolha o melhor plano para você" />
+                <Headline
+                  title="Quem usa recomenda"
+                  withLine
+                  lineSize="large"
+                  position="center"
+                />
               </motion.div>
+              <Slider data={testimonials} />
+            </section>
 
-              <p className={TryStyles}>{planSection.tryText}</p>
+            <section id="plans" className={PlansContainer}>
+              <div className={PlansSection}>
+                <motion.div
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={{
+                    visible: { opacity: 1, scale: 1 },
+                    hidden: { opacity: 0, scale: 0 },
+                  }}
+                  transition={{
+                    duration: 0.6,
+                    delay: 0.2,
+                    ease: [0, 0.71, 0.2, 1.01],
+                  }}
+                >
+                  <Headline title="Escolha o melhor plano para você" />
+                </motion.div>
 
-              <div className={LineContainer}>
-                <div className={LineStyle}></div>
-                <span className={OrText}>ou</span>
-                <div className={LineStyle}></div>
+                <p className={TryStyles}>{planSection.tryText}</p>
+
+                <div className={LineContainer}>
+                  <div className={LineStyle}></div>
+                  <span className={OrText}>ou</span>
+                  <div className={LineStyle}></div>
+                </div>
               </div>
-            </div>
 
-            <div className={PlanSectionStyles}>
-              {planSection.plans.map(PlanCardTemplate)}
-            </div>
-          </section>
+              <div className={PlanSectionStyles}>
+                {planSection.plans.map(PlanCardTemplate)}
+              </div>
+            </section>
 
-          <Footer
-            items={footerSection.items}
-            company={footerSection.company}
-            linkCompany={footerSection.linkCompany}
-            title={footerSection.title}
-          />
+            <Footer
+              items={footerSection.items}
+              company={footerSection.company}
+              linkCompany={footerSection.linkCompany}
+              title={footerSection.title}
+            />
+          </div>
         </div>
-      </div>
+      </Base>
     </main>
   )
 }
