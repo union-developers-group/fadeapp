@@ -18,7 +18,7 @@
         "codegen": "graphql-codegen --config codegen.yml"
     },
     "lint-staged": {
-        "src/**/*": [
+        "src/**/*.{ts,tsx}": [
             "yarn lint --fix",
             "yarn test --findRelatedTests --bail"
         ]
