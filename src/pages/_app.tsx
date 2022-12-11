@@ -3,6 +3,8 @@ import 'styles/globals.css'
 import Head from 'next/head'
 import type { AppProps } from 'next/app'
 import { ApolloProvider } from '@apollo/client'
+import { DefaultSeo, NextSeo } from 'next-seo'
+import { SEO } from '../../next-seo.config.js'
 
 import { client } from 'services/client'
 import { motion } from 'framer-motion'
@@ -11,8 +13,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ApolloProvider client={client}>
       <Head>
+        <NextSeo {...SEO} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Fadeapp - Seu parceiro de atividade</title>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -43,6 +45,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
         }}
       >
+        <DefaultSeo {...SEO} />
         <Component {...pageProps} />
       </motion.div>
     </ApolloProvider>

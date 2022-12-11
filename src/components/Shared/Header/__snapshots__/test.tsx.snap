@@ -264,6 +264,7 @@ exports[`<Header /> should match snapshot 1`] = `
       <button
         aria-expanded="false"
         aria-haspopup="true"
+        aria-label="Abrir Menu"
         class="fixed right-4"
         id="headlessui-menu-button-18"
         type="button"
