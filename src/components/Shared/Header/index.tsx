@@ -31,6 +31,7 @@ export interface HeaderMenuProps {
 }
 
 export const Header = ({ menu }: HeaderMenuProps) => {
+  const [isOpenMenuMobile, setIsOpenMenuMobile] = useState(false)
   const [styles, setStyles] = useState<HeaderStylesProps>({
     menu: 'lg:py-8 lg:bg-transparent',
     logo: 'lg:w-56 lg:h-12',
@@ -48,6 +49,10 @@ export const Header = ({ menu }: HeaderMenuProps) => {
         logo: 'lg:w-56 lg:h-12',
       })
     }
+  }
+
+  const handleMenuMobile = () => {
+    setIsOpenMenuMobile((prev) => !prev)
   }
 
   useEffect(() => {
@@ -75,7 +80,11 @@ export const Header = ({ menu }: HeaderMenuProps) => {
         <Menu>
           {({ open }) => (
             <>
-              <Menu.Button className={navBarMenuMobuleButtonStyle}>
+              <Menu.Button
+                className={navBarMenuMobuleButtonStyle}
+                aria-label={isOpenMenuMobile ? 'Fechar Menu' : 'Abrir Menu'}
+                onClick={handleMenuMobile}
+              >
                 <Icon className={navBarMenuMobuleIconStyle} icon="bx:menu" />
               </Menu.Button>
 

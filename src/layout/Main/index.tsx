@@ -80,47 +80,46 @@ export const MainLayout = ({
   }, [control, isInView])
 
   return (
-    <main className={MainContainer}>
+    <>
       <Header menu={menu} />
+      <main className={MainContainer}>
+        <Hero
+          subtitle={hero.subtitle}
+          headlineTitle={hero.headlineTitle}
+          image={hero.image}
+          textButton={hero.textButton}
+          tryText={hero.tryText}
+        />
 
-      <Hero
-        subtitle={hero.subtitle}
-        headlineTitle={hero.headlineTitle}
-        image={hero.image}
-        textButton={hero.textButton}
-        tryText={hero.tryText}
-      />
+        <ChatbootButton />
 
-      <ChatbootButton />
+        <section id="services" className={ServicesContainer}>
+          <Highlight items={highlights} />
+        </section>
 
-      <section id="services" className={ServicesContainer}>
-        <Highlight items={highlights} />
-      </section>
-
-      <section
-        ref={ref}
-        id="about"
-        style={{
-          background: `linear-gradient(103.85deg, rgba(0, 0, 0, 0.3822) 15.02%, rgba(0, 0, 0, 0.637) 87.81%), url(${aboutSection.background})`,
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: '100% 100%',
-        }}
-        className={AboutContainer}
-      >
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          variants={{
-            visible: { opacity: 1, scale: 1 },
-            hidden: { opacity: 0, scale: 0 },
+        <section
+          ref={ref}
+          id="about"
+          style={{
+            background: `linear-gradient(103.85deg, rgba(0, 0, 0, 0.3822) 15.02%, rgba(0, 0, 0, 0.637) 87.81%), url(${aboutSection.background})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: '100% 100%',
           }}
+          className={AboutContainer}
         >
-          <Headline withLine lineSize="large" title="Sobre" />
-        </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            variants={{
+              visible: { opacity: 1, scale: 1 },
+              hidden: { opacity: 0, scale: 0 },
+            }}
+          >
+            <Headline withLine lineSize="large" title="Sobre" />
+          </motion.div>
 
-        <div>
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -138,12 +137,10 @@ export const MainLayout = ({
           >
             <p>{aboutSection.text}</p>
           </motion.div>
-        </div>
-        <div className="absolute bottom-[-3px] h-[0.25rem] w-[80%] bg-primary"></div>
-      </section>
+          <div className="absolute bottom-[-3px] h-[0.25rem] w-[80%] bg-primary"></div>
+        </section>
 
-      <div className={bgFinalSection}>
-        <div className={TestimonialsContainer}>
+        <div className={`${bgFinalSection} ${TestimonialsContainer}`}>
           <section id="testimonials" className={TestimonialStyles}>
             <motion.div
               initial="hidden"
@@ -209,7 +206,7 @@ export const MainLayout = ({
             title={footerSection.title}
           />
         </div>
-      </div>
-    </main>
+      </main>
+    </>
   )
 }
