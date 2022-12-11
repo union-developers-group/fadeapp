@@ -1,6 +1,9 @@
-import { Headline } from 'components/Headline'
-import { useState } from 'react'
+import React, { useState } from 'react'
+import { motion } from 'framer-motion'
 
+import { analyticsEvent } from 'services/googleAnalytics'
+
+import { Headline } from 'components/Headline'
 import { Button } from 'components/Buttons/Button'
 import { FormModal } from 'components/Form/FormModal'
 
@@ -32,6 +35,8 @@ export const Hero = ({
 
   function onOpen() {
     setIsOpen(true)
+
+    analyticsEvent('form_start','form', 'Form Hero')
   }
 
   return (
@@ -39,16 +44,55 @@ export const Hero = ({
       <FormModal isOpen={isOpen} setIsOpen={setIsOpen} />
 
       <div className={TitleContainer}>
-        <Headline as="h1" title={headlineTitle} />
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.9,
+            delay: 0.3,
+            ease: [0, 0.71, 0.2, 1.01],
+          }}
+        >
+          <Headline as="h1" title={headlineTitle} />
+        </motion.div>
 
-        <p className={Subtitle}>{subtitle}</p>
-
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.9,
+            delay: 0.5,
+            ease: [0, 0.71, 0.2, 1.01],
+          }}
+        >
+          <p className={Subtitle}>{subtitle}</p>
+        </motion.div>
         <div className={ButtonContainer}>
-          <Button onClick={onOpen} className={ButtonStyle}>
-            {textButton}
-          </Button>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.9,
+              delay: 0.6,
+              ease: [0, 0.71, 0.2, 1.01],
+            }}
+          >
+            <Button onClick={onOpen} className={ButtonStyle}>
+              {textButton}
+            </Button>
+          </motion.div>
 
-          <p className={Try}>{tryText}</p>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.9,
+              delay: 0.7,
+              ease: [0, 0.1, 0.2, 1.01],
+            }}
+          >
+            <p className={Try}>{tryText}</p>
+          </motion.div>
         </div>
       </div>
     </div>

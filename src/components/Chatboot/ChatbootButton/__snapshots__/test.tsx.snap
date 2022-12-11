@@ -2,9 +2,8 @@
 
 exports[`<ChatbootButton /> should match snapshot 1`] = `
 <div>
-  <div>
-    <button
-      class="text-secondary
+  <button
+    class="text-secondary
   fixed
   cursor-pointer
   bg-primary
@@ -33,9 +32,9 @@ exports[`<ChatbootButton /> should match snapshot 1`] = `
   active:bg-transparent
   z-50
   "
-    >
-      <span
-        class="
+  >
+    <span
+      class="
   text-white
   text-lg
   lg:text-xl
@@ -48,11 +47,10 @@ exports[`<ChatbootButton /> should match snapshot 1`] = `
   leading-6
   font-medium
 "
-      >
-        Chat
-      </span>
-      <span />
-    </button>
-  </div>
+    >
+      Chat
+    </span>
+    <span />
+  </button>
 </div>
 `;

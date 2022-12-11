@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Icon } from '@iconify/react'
 import { Menu, Transition } from '@headlessui/react'
+import Scrollspy from 'react-scrollspy'
 
 import { Logo } from 'components/Shared/Logo'
 
@@ -30,6 +31,7 @@ export interface HeaderMenuProps {
 }
 
 export const Header = ({ menu }: HeaderMenuProps) => {
+  const [isOpenMenuMobile, setIsOpenMenuMobile] = useState(false)
   const [styles, setStyles] = useState<HeaderStylesProps>({
     menu: 'lg:py-8 lg:bg-transparent',
     logo: 'lg:w-56 lg:h-12',
@@ -49,6 +51,10 @@ export const Header = ({ menu }: HeaderMenuProps) => {
     }
   }
 
+  const handleMenuMobile = () => {
+    setIsOpenMenuMobile((prev) => !prev)
+  }
+
   useEffect(() => {
     document.addEventListener('scroll', handleScroll)
 
@@ -62,14 +68,26 @@ export const Header = ({ menu }: HeaderMenuProps) => {
           <Logo />
         </div>
 
-        <ul className={navBarUlStyle}>{menu.map(DesktopMenuTemplate)}</ul>
+        <Scrollspy
+          items={['services', 'about', 'testimonials', 'plans']}
+          currentClassName="text-primary"
+          className={navBarUlStyle}
+          offset={-200}
+        >
+          {menu.map(DesktopMenuTemplate)}
+        </Scrollspy>
 
         <Menu>
           {({ open }) => (
             <>
-              <Menu.Button className={navBarMenuMobuleButtonStyle}>
+              <Menu.Button
+                className={navBarMenuMobuleButtonStyle}
+                aria-label={isOpenMenuMobile ? 'Fechar Menu' : 'Abrir Menu'}
+                onClick={handleMenuMobile}
+              >
                 <Icon className={navBarMenuMobuleIconStyle} icon="bx:menu" />
               </Menu.Button>
+
               <Transition
                 show={open}
                 enter="transition duration-300 ease-out"

@@ -22,7 +22,7 @@ describe('<Header />', () => {
     expect(aboutLink).toBeInTheDocument()
     expect(testimonialsLink).toBeInTheDocument()
     expect(plansLink).toBeInTheDocument()
-    expect(links).toHaveLength(4)
+    expect(links).toHaveLength(5)
   })
 
   it('should render desktop menu', async () => {
@@ -83,6 +83,7 @@ describe('<Header />', () => {
     })
     const showPlansMobileLink = getByRole('menuitem', { name: 'Planos' })
 
+    expect(openButton).toHaveAttribute('aria-label', 'Fechar Menu')
     expect(showServiceMobileLink).toBeInTheDocument()
     expect(showAboutMobileLink).toBeInTheDocument()
     expect(showTestimonialMobileLink).toBeInTheDocument()
@@ -105,6 +106,7 @@ describe('<Header />', () => {
       name: 'Planos',
     })
 
+    expect(openButton).toHaveAttribute('aria-label', 'Abrir Menu')
     expect(hiddenServiceMobileLink).not.toBeInTheDocument()
     expect(hiddenAboutMobileLink).not.toBeInTheDocument()
     expect(hiddenTestimonialMobileLink).not.toBeInTheDocument()

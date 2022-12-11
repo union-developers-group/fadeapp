@@ -80,18 +80,6 @@ rounded-10
 md:left-[-2.125rem]
 shadow-[0.5rem_0.5rem_0rem_0rem_rgba(33,231,182)]
 
-after:content-[' ']
-after:block
-after:absolute
-after:h-[0.25rem]
-after:w-[5.875rem]
-after:top-[11.25rem]
-after:right-[-5.875rem]
-md:after:w-[10.75rem]
-md:after:top-[5.625rem]
-md:after:right-[-10.75rem]
-after:bg-primary
-
 before:content-[' ']
 before:block
 before:absolute

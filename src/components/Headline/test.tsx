@@ -21,7 +21,7 @@ describe('<Headline />', () => {
   })
 
   it('should render a line under the title', () => {
-    render(<Headline position="center" withLine title="Hello World" />)
+    render(<Headline position="center" as="h3" withLine title="Hello World" />)
     const line = getByTestId('underline')
 
     expect(line).toBeInTheDocument()

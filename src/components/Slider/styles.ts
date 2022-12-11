@@ -1,3 +1,21 @@
+export const CarouselTemplateStyle = `
+inline-block 
+h-full 
+after:absolute 
+after:top-[25.2rem] 
+after:right-[-1.8rem] 
+after:z-[-10] 
+after:block 
+after:h-[0.25rem] 
+after:w-[5.875rem] 
+after:bg-primary 
+last:after:hidden 
+md:ml-[1.875rem]
+md:after:top-[6.1rem] 
+md:after:right-[-1.875rem] 
+md:after:w-[12.625rem]
+`
+
 export const CarouselContainer = `
 flex
 max-w-full

@@ -75,7 +75,7 @@ hover:before:border-primary
           target="_blank"
         >
           <img
-            alt="name"
+            alt="Instagram"
             src="https://res.cloudinary.com/user/icon.svg"
           />
         </a>
@@ -87,7 +87,7 @@ capitalize
 text-white
 "
         >
-          name
+          Instagram
         </span>
       </div>
       <div
@@ -136,7 +136,7 @@ hover:before:border-primary
           target="_blank"
         >
           <img
-            alt="name2"
+            alt="Youtube"
             src="https://res.cloudinary.com/user/icon2.svg"
           />
         </a>
@@ -148,7 +148,7 @@ capitalize
 text-white
 "
         >
-          name2
+          Youtube
         </span>
       </div>
       <div
@@ -197,7 +197,7 @@ hover:before:border-primary
           target="_blank"
         >
           <img
-            alt="name3"
+            alt="Tiktok"
             src="https://res.cloudinary.com/user/icon3.svg"
           />
         </a>
@@ -209,7 +209,7 @@ capitalize
 text-white
 "
         >
-          name3
+          Tiktok
         </span>
       </div>
     </div>
@@ -220,9 +220,20 @@ text-gray-700
 font-normal
 "
     >
-      © 
-      Company
-       - 
+      ©
+       
+      <a
+        class="
+hover:text-primary
+"
+        href="https://company.com/"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Company
+      </a>
+       
+      - 
       2022
     </span>
   </footer>
