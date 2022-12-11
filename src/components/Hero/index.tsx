@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 
+import { analyticsEvent } from 'services/googleAnalytics'
+
 import { Headline } from 'components/Headline'
 import { Button } from 'components/Buttons/Button'
 import { FormModal } from 'components/Form/FormModal'
@@ -33,6 +35,8 @@ export const Hero = ({
 
   function onOpen() {
     setIsOpen(true)
+
+    analyticsEvent('form_start','form', 'Form Hero')
   }
 
   return (

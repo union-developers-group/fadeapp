@@ -3,6 +3,8 @@ import { useState } from 'react'
 
 import { ChatbootModal } from 'components/Chatboot/ChatbootModal'
 
+import { analyticsEvent } from 'services/googleAnalytics'
+
 import {
   ChatbootIconStyle,
   ChatbootButtonStyle,
@@ -15,6 +17,8 @@ export const ChatbootButton = () => {
 
   function handleOpenModal() {
     setIsOpenModal((prevState) => !prevState)
+
+    analyticsEvent('form_start','chatboot', 'Form Chatboot')
   }
 
   return (
